@@ -11,6 +11,9 @@ df['datetime'] = pd.to_datetime(df['datetime'])
 # Define the number of students to process
 number_of_students_to_process = 10
 
+# Sort the DataFrame by student_id
+df = df.sort_values(by='student_id', ascending=True)
+
 # Get unique student IDs
 unique_student_ids = df['student_id'].unique()[:number_of_students_to_process]
 
@@ -27,8 +30,8 @@ for user_id in unique_student_ids:
     # Calculate time differences in seconds
     user_df['time_seconds'] = (user_df['datetime'] - user_df['datetime'].min()).dt.total_seconds()
 
-    # Calculate the time difference between consecutive rows
-    user_df['time_seconds_difference'] = user_df['time_seconds'].diff().fillna(0)
+    # Calculate the amount of clicks
+    user_df['amount_of_clicks'] = user_df['numbercl'].str.count(',') + 1
 
     # Create a figure with two subplots
     fig, axs = plt.subplots(2, 1, figsize=(10, 12))
@@ -40,8 +43,12 @@ for user_id in unique_student_ids:
     axs[0].set_title('Submissions Over Time')
     axs[0].grid(True)
 
-    # Plot the line plot on the second subplot
-    axs[1].plot(user_df.index, user_df['time_seconds_difference'], marker='o', linestyle='-')
+    # Plot the scatterplot on the second subplot
+    sns.scatterplot(data=user_df, x=user_df.index, y='timestampsm', hue='amount_of_clicks', palette='viridis_r', alpha=1)
+
+    # Plot the line plot on top of the scatterplot
+    sns.lineplot(data=user_df, x=user_df.index, y='timestampsm', linestyle='-', alpha=0.5)
+
     axs[1].set_xlabel('Submission Index')
     axs[1].set_ylabel('Time (seconds)')
     axs[1].set_title('Time difference of Submission by Figure')
