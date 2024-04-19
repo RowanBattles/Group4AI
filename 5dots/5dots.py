@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv('restructured_fivepointstest.csv')
 
-number_of_students_to_process = 10  # Set this to however many students you want to process
+number_of_students_to_process = 10 
 
 lines = {
     1: [(0, 2), (2, 2)],
