@@ -5,7 +5,9 @@ df = pd.read_csv('restructured_fivepointstestWithDatetime.csv')
 
 df = df.sort_values(by='student_id', ascending=True)
 
-number_of_students_to_process = 10 
+number_of_students_to_process = 30 
+
+student_id = [13]
 
 lines = {
     1: [(0, 2), (2, 2)],
@@ -22,7 +24,7 @@ dot_coords = [(0, 0), (2, 0), (0, 2), (2, 2), (1, 1)]
 def apply_offset(points, x_offset, y_offset):
     return [(x + x_offset, y + y_offset) for x, y in points]
 
-unique_student_ids = df['student_id'].unique()[:number_of_students_to_process]
+unique_student_ids = df['student_id'].unique()[39:number_of_students_to_process]
 
 for user_id in unique_student_ids:
     user_df = df[df['student_id'] == user_id]
@@ -39,7 +41,7 @@ for user_id in unique_student_ids:
         space_increment = timestampsm / 1000
         line_pattern = row['patternsm'].replace(',', '')
         num_lines = line_pattern.count('1')
-        threshold_time = 3000 + (500 * num_lines)
+        threshold_time = 5000 + (800 * num_lines)
 
         if timestampsm > threshold_time:
             x_offset = 0
