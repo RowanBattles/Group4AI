@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('restructured_fivepointstestWithDatetime.csv')
+df = pd.read_csv('fivepointsWithDatetime.csv')
 
 df = df.sort_values(by='student_id', ascending=True)
 
@@ -24,7 +24,7 @@ dot_coords = [(0, 0), (2, 0), (0, 2), (2, 2), (1, 1)]
 def apply_offset(points, x_offset, y_offset):
     return [(x + x_offset, y + y_offset) for x, y in points]
 
-unique_student_ids = df['student_id'].unique()[39:number_of_students_to_process]
+unique_student_ids = df['student_id'].unique()[:number_of_students_to_process]
 
 for user_id in unique_student_ids:
     user_df = df[df['student_id'] == user_id]
