@@ -31,10 +31,22 @@ for user_id in unique_student_ids:
     user_df = user_df.sort_values(by='datetime', ascending=True)
     user_df.reset_index(drop=True, inplace=True)
 
-    fig, ax = plt.subplots(dpi=300)
+    num_pauses = 0
     x_offset = 0
     y_offset = 0
     max_x_value = 2
+
+    for index, row in user_df.iterrows():
+        timestampsm = row['timestampsm']
+        line_pattern = row['patternsm'].replace(',', '')
+        num_lines = line_pattern.count('1')
+        threshold_time = 5000 + (800 * num_lines)
+
+        if timestampsm > threshold_time:
+            num_pauses += 1
+
+    plot_height = 3 + num_pauses * 2
+    fig, ax = plt.subplots(figsize=(10, plot_height), dpi=300)
 
     for index, row in user_df.iterrows():
         timestampsm = row['timestampsm']
@@ -53,15 +65,15 @@ for user_id in unique_student_ids:
                 if line in lines:
                     points = lines[line]
                     shifted_points = apply_offset(points, x_offset, y_offset)
-                    ax.plot([p[0] for p in shifted_points], [p[1] for p in shifted_points], 'k-', linewidth=0.5)
+                    ax.plot([p[0] for p in shifted_points], [p[1] for p in shifted_points], 'k-', linewidth=0.8)
 
         for dot in dot_coords:
             shifted_dot = apply_offset([dot], x_offset, y_offset)[0]
-            ax.plot(shifted_dot[0], shifted_dot[1], 'ko', markersize=1)
+            ax.plot(shifted_dot[0], shifted_dot[1], 'ko', markersize=1.6)
 
         x_offset += (max_x_value + 1) + space_increment
 
-    plt.xlim(-1, x_offset)
+    plt.xlim(-1, max(x_offset, 20))
     plt.ylim(y_offset - 10, 3)
     plt.axis('scaled')
     plt.axis('off')
