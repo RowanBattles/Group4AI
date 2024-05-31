@@ -2,12 +2,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 df = pd.read_csv('fivepointsWithDatetime.csv')
-
 df = df.sort_values(by='student_id', ascending=True)
 
 number_of_students_to_process = 30 
-
-student_id = [13]
 
 lines = {
     1: [(0, 2), (2, 2)],
@@ -46,7 +43,14 @@ for user_id in unique_student_ids:
             num_pauses += 1
 
     plot_height = 3 + num_pauses * 2
-    fig, ax = plt.subplots(figsize=(10, plot_height), dpi=300)
+
+    total_width = 0
+    for index, row in user_df.iterrows():
+        timestampsm = row['timestampsm']
+        space_increment = timestampsm / 1000
+        total_width += (max_x_value + 1) + space_increment
+    
+    fig, ax = plt.subplots(figsize=(total_width / 10, plot_height), dpi=300)
 
     for index, row in user_df.iterrows():
         timestampsm = row['timestampsm']
@@ -73,11 +77,11 @@ for user_id in unique_student_ids:
 
         x_offset += (max_x_value + 1) + space_increment
 
-    plt.xlim(-1, max(x_offset, 20))
+    plt.xlim(-1, total_width)
     plt.ylim(y_offset - 10, 3)
     plt.axis('scaled')
     plt.axis('off')
     plt.savefig(f'results/user_{user_id}_figures.png')
     plt.clf()
 
-print("All user figures have been processed and saved.")
+print("All figures have been processed and saved.")
