@@ -10,6 +10,7 @@ df['datetime'] = pd.to_datetime(df['datetime'])
 
 # Define the number of students to process
 number_of_students_to_process = 50
+average_students = [7095, 180, 4828, 8029, 5826, 4028, 9974, 3371]
 
 student_id = [13]
 
@@ -19,7 +20,7 @@ df = df.sort_values(by='student_id', ascending=True)
 # Get unique student IDs
 unique_student_ids = df['student_id'].unique()[:number_of_students_to_process]
 
-for user_id in unique_student_ids:
+for user_id in average_students:
     # Filter DataFrame for the current user
     user_df = df[df['student_id'] == user_id].copy()
 

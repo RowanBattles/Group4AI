@@ -5,6 +5,7 @@ df = pd.read_csv('fivepointsWithDatetime.csv')
 df = df.sort_values(by='student_id', ascending=True)
 
 number_of_students_to_process = 30 
+average_students = [6413, 9503, 8498, 6525, 9503, 8506, 8600, 7796]
 
 lines = {
     1: [(0, 2), (2, 2)],
@@ -23,7 +24,7 @@ def apply_offset(points, x_offset, y_offset):
 
 unique_student_ids = df['student_id'].unique()[:number_of_students_to_process]
 
-for user_id in unique_student_ids:
+for user_id in average_students:
     user_df = df[df['student_id'] == user_id]
     user_df = user_df.sort_values(by='datetime', ascending=True)
     user_df.reset_index(drop=True, inplace=True)
