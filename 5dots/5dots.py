@@ -5,7 +5,7 @@ df = pd.read_csv('fivepointsWithDatetime.csv')
 df = df.sort_values(by='student_id', ascending=True)
 
 number_of_students_to_process = 30 
-average_students = [6413, 8928, 5926, 6525, 5230]
+average_students = [6776, 5230, 5886, 6525]
 
 lines = {
     1: [(0, 2), (2, 2)],
