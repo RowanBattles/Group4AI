@@ -21,3 +21,6 @@ C:\Users\rowan\OneDrive\Bureaublad\Tools\School\Semester 4\Group4AI\Demo\5 dot t
 C:\Users\rowan\OneDrive\Bureaublad\Tools\School\Semester 4\Group4AI\Demo\5 dot test\obj\Debug\5 dot test.csproj.CoreCompileInputs.cache
 C:\Users\rowan\OneDrive\Bureaublad\Tools\School\Semester 4\Group4AI\Demo\5 dot test\obj\Debug\5 dot test.exe
 C:\Users\rowan\OneDrive\Bureaublad\Tools\School\Semester 4\Group4AI\Demo\5 dot test\obj\Debug\5 dot test.pdb
+C:\Users\rowan\OneDrive\Bureaublad\Tools\School\Semester 4\Group4AI\Demo\5 dot test\obj\Debug\Start.g.cs
+C:\Users\rowan\OneDrive\Bureaublad\Tools\School\Semester 4\Group4AI\Demo\5 dot test\obj\Debug\5 dot test_MarkupCompile.lref
+C:\Users\rowan\OneDrive\Bureaublad\Tools\School\Semester 4\Group4AI\Demo\5 dot test\obj\Debug\Start.baml
