@@ -1,0 +1,23 @@
+C:\Users\Marwa\source\repos\5 dot test\5 dot test\obj\Debug\5 dot test.csprojAssemblyReference.cache
+C:\Users\Marwa\source\repos\5 dot test\5 dot test\obj\Debug\MainWindow.baml
+C:\Users\Marwa\source\repos\5 dot test\5 dot test\obj\Debug\MainWindow.g.cs
+C:\Users\Marwa\source\repos\5 dot test\5 dot test\obj\Debug\App.g.cs
+C:\Users\Marwa\source\repos\5 dot test\5 dot test\obj\Debug\5 dot test_MarkupCompile.cache
+C:\Users\Marwa\source\repos\5 dot test\5 dot test\obj\Debug\5 dot test.g.resources
+C:\Users\Marwa\source\repos\5 dot test\5 dot test\obj\Debug\_5_dot_test.Properties.Resources.resources
+C:\Users\Marwa\source\repos\5 dot test\5 dot test\obj\Debug\5 dot test.csproj.GenerateResource.cache
+C:\Users\Marwa\source\repos\5 dot test\5 dot test\obj\Debug\5 dot test.csproj.CoreCompileInputs.cache
+C:\Users\rowan\OneDrive\Bureaublad\Tools\School\Semester 4\Group4AI\Demo\5 dot test\bin\Debug\5 dot test.exe.config
+C:\Users\rowan\OneDrive\Bureaublad\Tools\School\Semester 4\Group4AI\Demo\5 dot test\bin\Debug\5 dot test.exe
+C:\Users\rowan\OneDrive\Bureaublad\Tools\School\Semester 4\Group4AI\Demo\5 dot test\bin\Debug\5 dot test.pdb
+C:\Users\rowan\OneDrive\Bureaublad\Tools\School\Semester 4\Group4AI\Demo\5 dot test\obj\Debug\5 dot test.csproj.AssemblyReference.cache
+C:\Users\rowan\OneDrive\Bureaublad\Tools\School\Semester 4\Group4AI\Demo\5 dot test\obj\Debug\MainWindow.baml
+C:\Users\rowan\OneDrive\Bureaublad\Tools\School\Semester 4\Group4AI\Demo\5 dot test\obj\Debug\MainWindow.g.cs
+C:\Users\rowan\OneDrive\Bureaublad\Tools\School\Semester 4\Group4AI\Demo\5 dot test\obj\Debug\App.g.cs
+C:\Users\rowan\OneDrive\Bureaublad\Tools\School\Semester 4\Group4AI\Demo\5 dot test\obj\Debug\5 dot test_MarkupCompile.cache
+C:\Users\rowan\OneDrive\Bureaublad\Tools\School\Semester 4\Group4AI\Demo\5 dot test\obj\Debug\5 dot test.g.resources
+C:\Users\rowan\OneDrive\Bureaublad\Tools\School\Semester 4\Group4AI\Demo\5 dot test\obj\Debug\_5_dot_test.Properties.Resources.resources
+C:\Users\rowan\OneDrive\Bureaublad\Tools\School\Semester 4\Group4AI\Demo\5 dot test\obj\Debug\5 dot test.csproj.GenerateResource.cache
+C:\Users\rowan\OneDrive\Bureaublad\Tools\School\Semester 4\Group4AI\Demo\5 dot test\obj\Debug\5 dot test.csproj.CoreCompileInputs.cache
+C:\Users\rowan\OneDrive\Bureaublad\Tools\School\Semester 4\Group4AI\Demo\5 dot test\obj\Debug\5 dot test.exe
+C:\Users\rowan\OneDrive\Bureaublad\Tools\School\Semester 4\Group4AI\Demo\5 dot test\obj\Debug\5 dot test.pdb
