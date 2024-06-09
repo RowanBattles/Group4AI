@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -27,6 +28,7 @@ namespace FiveDotTest
         private int submissions;
         private int emptySubmissions;
         private int pauses;
+        private DateTime lastSubmission;
         private int duplicates;
         private List<Pattern> submittedPatterns;
         private int timeLeft;
@@ -42,6 +44,8 @@ namespace FiveDotTest
             submittedPatterns = new List<Pattern>();
             duplicates = 0;
             emptySubmissions = 0;
+            lastSubmission = DateTime.Now;
+
 
             lines = new Line[8];
             for (int i = 0; i < lines.Length; i++)
@@ -111,6 +115,28 @@ namespace FiveDotTest
             }
         }
 
+        private void HandlePause()
+        {
+            DateTime currentSubmission = DateTime.Now;
+
+            // Count the clicked lines from the submitted pattern
+            int clickedLines = 0;
+            for (int i = 0; i < lines.Length; i++)
+            {
+                if (lines[i].IsClicked)
+                {
+                    clickedLines++;
+                }
+            }
+
+            if ((currentSubmission - lastSubmission).TotalSeconds > (5 + (0.8 * clickedLines)))
+            {
+                pauses++;
+                PausesTextBlock.Text = $"Pauses: {pauses}";
+            }
+            lastSubmission = currentSubmission;
+        }
+
         private void Timer_Tick(object sender, EventArgs e)
         {
             timeLeft--;
@@ -148,6 +174,7 @@ namespace FiveDotTest
         {
             if (timeLeft > 0)
             {
+                HandlePause();
                 HandleDuplicate();
                 HandleEmptySubmission();
                 submissions++;
@@ -163,8 +190,7 @@ namespace FiveDotTest
             using (StreamWriter writer = new StreamWriter(filePath))
             {
                 // Create header
-                writer.Write("duplicates,");
-                writer.Write("empty_submissions,");
+                writer.Write("pauses,duplicates,empty_submissions,");
                 for (int i = 0; i < boxes.Length; i++)
                 {
                     writer.Write($"Box_{i + 1}_Submissions,Box_{i + 1}_Clicks,Box_{i + 1}_Unclicks");
@@ -176,8 +202,7 @@ namespace FiveDotTest
                 writer.WriteLine();
 
                 // Create value line
-                writer.Write($"{duplicates},");
-                writer.Write($"{emptySubmissions},");
+                writer.Write($"{pauses},{duplicates},{emptySubmissions},");
                 for (int i = 0; i < boxes.Length; i++)
                 {
                     writer.Write($"{boxes[i].Submissions},{boxes[i].Clicks},{boxes[i].Unclicks}");

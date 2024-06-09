@@ -15,6 +15,7 @@
         <TextBlock Grid.Row="0" Text="Total Submits:" HorizontalAlignment="Left" Margin="10"/>
         <TextBlock x:Name="DuplicatesTextBlock" Grid.Row="1" Text="Duplicates: 0" HorizontalAlignment="Left" Margin="10,10,0,248"/>
         <TextBlock x:Name="EmptySubmissionsTextBlock" Grid.Row="1" Text="Empty Submissions: 0" HorizontalAlignment="Left" Margin="10,31,0,227"/>
+        <TextBlock x:Name="PausesTextBlock" Grid.Row="1" Text="Pauses: 0" HorizontalAlignment="Left" Margin="10,52,0,206"/>
         <TextBlock x:Name="CounterTextBlock" Grid.Row="0" Text="0" HorizontalAlignment="Left" Margin="86,10,0,10"/>
         <TextBlock x:Name="TimerTextBlock" Grid.Row="0" Text="Time: 180 Seconds" HorizontalAlignment="Left" Margin="206,10,0,10"/>
         <TextBlock x:Name="BoxNumberBlock" Grid.Row="0" Text="Box: 0" HorizontalAlignment="Left" Margin="438,10,0,10"/>
