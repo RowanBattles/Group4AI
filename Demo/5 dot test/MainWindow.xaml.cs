@@ -25,6 +25,10 @@ namespace FiveDotTest
         private Box[] boxes;
         private int currentBox;
         private int submissions;
+        private int emptySubmissions;
+        private int pauses;
+        private int duplicates;
+        private List<Pattern> submittedPatterns;
         private int timeLeft;
         private DispatcherTimer timer;
 
@@ -34,6 +38,10 @@ namespace FiveDotTest
             submissions = 0;
             timeLeft = 180;
             currentBox = 0;
+            pauses = 0;
+            submittedPatterns = new List<Pattern>();
+            duplicates = 0;
+            emptySubmissions = 0;
 
             lines = new Line[8];
             for (int i = 0; i < lines.Length; i++)
@@ -60,6 +68,46 @@ namespace FiveDotTest
                 lines[i].IsClicked = false;
                 Rectangle line = (Rectangle)FindName($"line{i + 1}");
                 line.Fill = new SolidColorBrush(Colors.Gray);
+            }
+        }
+
+        private void HandleDuplicate()
+        {
+            var newPattern = new Pattern();
+            for (int i = 0; i < lines.Length; i++)
+            {
+                newPattern.lines[i] = lines[i].IsClicked;
+            }
+
+            foreach (var pattern in submittedPatterns)
+            {
+                if (pattern.Matches(newPattern))
+                {
+                    duplicates++;
+                    DuplicatesTextBlock.Text = $"Duplicates: {duplicates}";
+                    return;
+                }
+            }
+
+            submittedPatterns.Add(newPattern);
+        }
+
+        private void HandleEmptySubmission()
+        {
+            bool isEmpty = true;
+            for (int i = 0; i < lines.Length; i++)
+            {
+                if (lines[i].IsClicked)
+                {
+                    isEmpty = false;
+                    break;
+                }
+            }
+
+            if (isEmpty)
+            {
+                emptySubmissions++;
+                EmptySubmissionsTextBlock.Text = $"Empty Submissions: {emptySubmissions}";
             }
         }
 
@@ -100,6 +148,8 @@ namespace FiveDotTest
         {
             if (timeLeft > 0)
             {
+                HandleDuplicate();
+                HandleEmptySubmission();
                 submissions++;
                 boxes[currentBox].Submissions++;
                 CounterTextBlock.Text = submissions.ToString();
@@ -113,6 +163,8 @@ namespace FiveDotTest
             using (StreamWriter writer = new StreamWriter(filePath))
             {
                 // Create header
+                writer.Write("duplicates,");
+                writer.Write("empty_submissions,");
                 for (int i = 0; i < boxes.Length; i++)
                 {
                     writer.Write($"Box_{i + 1}_Submissions,Box_{i + 1}_Clicks,Box_{i + 1}_Unclicks");
@@ -124,6 +176,8 @@ namespace FiveDotTest
                 writer.WriteLine();
 
                 // Create value line
+                writer.Write($"{duplicates},");
+                writer.Write($"{emptySubmissions},");
                 for (int i = 0; i < boxes.Length; i++)
                 {
                     writer.Write($"{boxes[i].Submissions},{boxes[i].Clicks},{boxes[i].Unclicks}");
