@@ -11,9 +11,12 @@ namespace _5_dot_test
         public int Submissions { get; set; }
         public int Unclicks { get; set; }
         public int Clicks { get; set; }
+        public int TimeGap { get; set; }
+        public List<Pattern> Patterns { get; set; }
 
         public Box()
         {
+            Patterns = new List<Pattern>();
             Submissions = 0;
             Unclicks = 0;
             Clicks = 0;

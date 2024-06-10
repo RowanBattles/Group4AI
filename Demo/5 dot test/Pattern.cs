@@ -9,10 +9,12 @@ namespace _5_dot_test
     public class Pattern
     {
         public bool[] lines { get; set; }
+        public DateTime timestamp { get; set; }
 
-        public Pattern()
+        public Pattern(DateTime timestamp)
         {
             lines = new bool[8];
+            this.timestamp = timestamp;
         }
 
         public bool Matches(Pattern pattern)

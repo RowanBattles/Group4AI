@@ -26,6 +26,7 @@ namespace FiveDotTest
         private Box[] boxes;
         private int currentBox;
         private int submissions;
+        private int uniquePatterns;
         private int emptySubmissions;
         private int pauses;
         private DateTime lastSubmission;
@@ -38,6 +39,7 @@ namespace FiveDotTest
         {
             InitializeComponent();
             submissions = 0;
+            uniquePatterns = 0;
             timeLeft = 180;
             currentBox = 0;
             pauses = 0;
@@ -77,7 +79,8 @@ namespace FiveDotTest
 
         private void HandleDuplicate()
         {
-            var newPattern = new Pattern();
+            var newPattern = new Pattern(DateTime.Now);
+            bool isUnique = true;
             for (int i = 0; i < lines.Length; i++)
             {
                 newPattern.lines[i] = lines[i].IsClicked;
@@ -89,8 +92,15 @@ namespace FiveDotTest
                 {
                     duplicates++;
                     DuplicatesTextBlock.Text = $"Duplicates: {duplicates}";
-                    return;
+                    isUnique = false;
+                    break;
                 }
+            }
+
+            if (isUnique)
+            {
+                uniquePatterns++;
+                UniquePatternsTextBlock.Text = $"Unique Patterns: {uniquePatterns}";
             }
 
             submittedPatterns.Add(newPattern);
@@ -137,6 +147,31 @@ namespace FiveDotTest
             lastSubmission = currentSubmission;
         }
 
+        private void CalculateTimegap()
+        {
+            foreach (var box in boxes)
+            {
+                if (box.Patterns.Count > 1)
+                {
+                    var biggestTimeGap = 0;
+
+                    for (int i = 0; i < box.Patterns.Count - 1; i++)
+                    {
+                        var timeGap = (box.Patterns[i + 1].timestamp - box.Patterns[i].timestamp).TotalMilliseconds;
+                        if (timeGap > biggestTimeGap)
+                        {
+                            biggestTimeGap = (int)timeGap;
+                        }
+                    }
+                    box.TimeGap = biggestTimeGap;
+                }
+                else
+                {
+                    box.TimeGap = 10000;
+                }
+            }
+        }
+
         private void Timer_Tick(object sender, EventArgs e)
         {
             timeLeft--;
@@ -159,11 +194,13 @@ namespace FiveDotTest
 
                 if (lines[index].IsClicked)
                 {
+                    boxes[currentBox].Unclicks++;
                     lines[index].IsClicked = false;
                     clickedRectangle.Fill = new SolidColorBrush(Colors.Gray);
                 }
                 else
                 {
+                    boxes[currentBox].Clicks++;
                     lines[index].IsClicked = true;
                     clickedRectangle.Fill = new SolidColorBrush(Colors.LimeGreen);
                 }
@@ -174,11 +211,12 @@ namespace FiveDotTest
         {
             if (timeLeft > 0)
             {
+                boxes[currentBox].Patterns.Add(new Pattern(DateTime.Now));
+                boxes[currentBox].Submissions++;
                 HandlePause();
                 HandleDuplicate();
                 HandleEmptySubmission();
                 submissions++;
-                boxes[currentBox].Submissions++;
                 CounterTextBlock.Text = submissions.ToString();
                 DisableLines();
             }   
@@ -186,14 +224,15 @@ namespace FiveDotTest
 
         private void Button_export(object sender, RoutedEventArgs e)
         {
-            string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "counter.csv");
+            CalculateTimegap();
+            string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "test.csv");
             using (StreamWriter writer = new StreamWriter(filePath))
             {
                 // Create header
-                writer.Write("pauses,duplicates,empty_submissions,");
+                writer.Write("pauses,unique_patterns_count,total_values_count,duplicates,empty_submissions,");
                 for (int i = 0; i < boxes.Length; i++)
                 {
-                    writer.Write($"Box_{i + 1}_Submissions,Box_{i + 1}_Clicks,Box_{i + 1}_Unclicks");
+                    writer.Write($"Box_{i + 1}_Submissions,Box_{i + 1}_Clicks,Box_{i + 1}_Unclicks,Box_{i + 1}_Timegap");
                     if (i < boxes.Length - 1)
                     {
                         writer.Write(",");
@@ -202,10 +241,10 @@ namespace FiveDotTest
                 writer.WriteLine();
 
                 // Create value line
-                writer.Write($"{pauses},{duplicates},{emptySubmissions},");
+                writer.Write($"{pauses},{uniquePatterns},{submissions},{duplicates},{emptySubmissions},");
                 for (int i = 0; i < boxes.Length; i++)
                 {
-                    writer.Write($"{boxes[i].Submissions},{boxes[i].Clicks},{boxes[i].Unclicks}");
+                    writer.Write($"{boxes[i].Submissions},{boxes[i].Clicks},{boxes[i].Unclicks},{boxes[i].TimeGap}");
                     if (i < boxes.Length - 1)
                     {
                         writer.Write(",");
