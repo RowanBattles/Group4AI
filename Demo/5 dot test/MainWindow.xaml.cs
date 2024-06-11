@@ -126,7 +126,6 @@ namespace FiveDotTest
         {
             DateTime currentSubmission = DateTime.Now;
 
-            // Count the clicked lines from the submitted pattern
             int clickedLines = 0;
             for (int i = 0; i < lines.Length; i++)
             {
@@ -141,6 +140,21 @@ namespace FiveDotTest
                 pauses++;
             }
             lastSubmission = currentSubmission;
+        }
+
+        private void HandleBox()
+        {
+            boxes[currentBox].Patterns.Add(new Pattern(DateTime.Now));
+            int clickedLines = 0;
+            for (int i = 0; i < lines.Length; i++)
+            {
+                if (lines[i].IsClicked)
+                {
+                    clickedLines++;
+                }
+            }
+            boxes[currentBox].Lines += clickedLines;
+            boxes[currentBox].Submissions++;
         }
 
         private void CalculateTimegap()
@@ -206,8 +220,7 @@ namespace FiveDotTest
         {
             if (timeLeft > 0)
             {
-                boxes[currentBox].Patterns.Add(new Pattern(DateTime.Now));
-                boxes[currentBox].Submissions++;
+                HandleBox();
                 HandlePause();
                 HandleDuplicate();
                 HandleEmptySubmission();
@@ -227,7 +240,7 @@ namespace FiveDotTest
                 writer.Write("pauses,unique_patterns_count,total_values_count,duplicates,empty_submissions,");
                 for (int i = 0; i < boxes.Length; i++)
                 {
-                    writer.Write($"Box_{i + 1}_Submissions,Box_{i + 1}_Clicks,Box_{i + 1}_Unclicks,Box_{i + 1}_Timegap");
+                    writer.Write($"Box_{i + 1}_Submissions,Box_{i + 1}_Lines,Box_{i + 1}_Clicks,Box_{i + 1}_Unclicks,Box_{i + 1}_Timegap");
                     if (i < boxes.Length - 1)
                     {
                         writer.Write(",");
@@ -239,7 +252,7 @@ namespace FiveDotTest
                 writer.Write($"{pauses},{uniquePatterns},{submissions},{duplicates},{emptySubmissions},");
                 for (int i = 0; i < boxes.Length; i++)
                 {
-                    writer.Write($"{boxes[i].Submissions},{boxes[i].Clicks},{boxes[i].Unclicks},{boxes[i].TimeGap}");
+                    writer.Write($"{boxes[i].Submissions},{boxes[i].Lines},{boxes[i].Clicks},{boxes[i].Unclicks},{boxes[i].TimeGap}");
                     if (i < boxes.Length - 1)
                     {
                         writer.Write(",");
@@ -247,7 +260,7 @@ namespace FiveDotTest
                 }
                 writer.WriteLine();
             }
-            MessageBox.Show($"Counter value exported to {filePath}");
+            MessageBox.Show($"Test succesfully exported!");
         }
     }
 }

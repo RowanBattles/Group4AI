@@ -12,6 +12,7 @@ namespace _5_dot_test
         public int Unclicks { get; set; }
         public int Clicks { get; set; }
         public int TimeGap { get; set; }
+        public int Lines { get; set; }
         public List<Pattern> Patterns { get; set; }
 
         public Box()
@@ -20,6 +21,7 @@ namespace _5_dot_test
             Submissions = 0;
             Unclicks = 0;
             Clicks = 0;
+            Lines = 0;
         }
     }
 }

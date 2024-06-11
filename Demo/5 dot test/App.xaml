@@ -2,7 +2,7 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:_5_dot_test"
-             StartupUri="Start.xaml">
+             StartupUri="Result.xaml">
     <Application.Resources>
          
     </Application.Resources>
