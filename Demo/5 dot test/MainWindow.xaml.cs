@@ -91,7 +91,6 @@ namespace FiveDotTest
                 if (pattern.Matches(newPattern))
                 {
                     duplicates++;
-                    DuplicatesTextBlock.Text = $"Duplicates: {duplicates}";
                     isUnique = false;
                     break;
                 }
@@ -100,7 +99,6 @@ namespace FiveDotTest
             if (isUnique)
             {
                 uniquePatterns++;
-                UniquePatternsTextBlock.Text = $"Unique Patterns: {uniquePatterns}";
             }
 
             submittedPatterns.Add(newPattern);
@@ -121,7 +119,6 @@ namespace FiveDotTest
             if (isEmpty)
             {
                 emptySubmissions++;
-                EmptySubmissionsTextBlock.Text = $"Empty Submissions: {emptySubmissions}";
             }
         }
 
@@ -142,7 +139,6 @@ namespace FiveDotTest
             if ((currentSubmission - lastSubmission).TotalSeconds > (5 + (0.8 * clickedLines)))
             {
                 pauses++;
-                PausesTextBlock.Text = $"Pauses: {pauses}";
             }
             lastSubmission = currentSubmission;
         }
@@ -177,7 +173,6 @@ namespace FiveDotTest
             timeLeft--;
             TimerTextBlock.Text = $"Time: {timeLeft} Seconds";
             currentBox = (180 - timeLeft) / 10;
-            BoxNumberBlock.Text = $"Box: {currentBox}";
             if (timeLeft == 0)
             {
                 timer.Stop();

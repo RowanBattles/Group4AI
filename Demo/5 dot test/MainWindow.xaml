@@ -12,14 +12,10 @@
         </Grid.RowDefinitions>
 
         <!-- Total Submits -->
-        <TextBlock Grid.Row="0" Text="Total Submits:" HorizontalAlignment="Left" Margin="10"/>
-        <TextBlock x:Name="DuplicatesTextBlock" Grid.Row="1" Text="Duplicates: 0" HorizontalAlignment="Left" Margin="10,10,0,248"/>
-        <TextBlock x:Name="UniquePatternsTextBlock" Grid.Row="1" Text="Unique Patterns: 0" HorizontalAlignment="Left" Margin="10,73,0,185"/>
-        <TextBlock x:Name="EmptySubmissionsTextBlock" Grid.Row="1" Text="Empty Submissions: 0" HorizontalAlignment="Left" Margin="10,31,0,227"/>
-        <TextBlock x:Name="PausesTextBlock" Grid.Row="1" Text="Pauses: 0" HorizontalAlignment="Left" Margin="10,52,0,206"/>
-        <TextBlock x:Name="CounterTextBlock" Grid.Row="0" Text="0" HorizontalAlignment="Left" Margin="86,10,0,10"/>
-        <TextBlock x:Name="TimerTextBlock" Grid.Row="0" Text="Time: 180 Seconds" HorizontalAlignment="Left" Margin="206,10,0,10"/>
-        <TextBlock x:Name="BoxNumberBlock" Grid.Row="0" Text="Box: 0" HorizontalAlignment="Left" Margin="438,10,0,10"/>
+
+        <TextBlock x:Name="CounterTextBlock" Grid.Row="0" Text="0" HorizontalAlignment="Left" Margin="165, 30" FontSize="20" FontWeight="Bold"/>
+        <TextBlock x:Name="TimerTextBlock" Grid.Row="0" Text="Time: 180 Seconds" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"  Margin="30"/>
+        <TextBlock Grid.Row="0" Text="Total Submits:" FontSize="20" HorizontalAlignment="Left" FontWeight="Bold" Margin="25, 30"/>
 
         <!-- Dots-->
         <Ellipse x:Name="topLeftDot" Width="15" Height="15" Fill="Black" Grid.Row="1" Margin="190,69,313.4,161.6"/>
@@ -131,7 +127,7 @@
         </Rectangle>
 
         <!-- Submit Button -->
-        <Button Grid.Row="2" Content="Submit" HorizontalAlignment="Center" Width="75" Margin="10" Click="Button_Click"/>
-        <Button Grid.Row="2" Content="Export" HorizontalAlignment="Left" Width="75" Margin="366,10,0,10" Click="Button_export"/>
+        <Button Grid.Row="1" Content="Submit" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="160" Height="100" FontSize="30" FontWeight="Bold" Margin="50" Click="Button_Click"/>
+        <Button Grid.Row="2" Content="Export" HorizontalAlignment="Left" Width="100" Height="100" FontWeight="Bold" FontSize="25" Margin="40" Click="Button_export"/>
     </Grid>
 </Window>
