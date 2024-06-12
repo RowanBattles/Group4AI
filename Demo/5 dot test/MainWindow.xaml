@@ -3,7 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Five Dot Test" Height="350" Width="525"
         WindowState="Maximized"
-        WindowStyle="None">
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -11,20 +12,33 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
+        <!-- Header -->
+        <Grid VerticalAlignment="Top" Height="70" Background="#FF2C6CA3" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10" Grid.Column="0">
+                <Image Source="images/5dots.png" Height="50" Margin="10,0,0,0"/>
+                <TextBlock Text="5-point test" FontSize="24" FontWeight="Bold" VerticalAlignment="Center"/>
+            </StackPanel>
+            <Image Source="images/MaastrichtUni.png" Height="50" Margin="0,10,10,0" Grid.Column="2" HorizontalAlignment="Right"/>
+        </Grid>
+
         <!-- Total Submits -->
+        <TextBlock x:Name="CounterTextBlock" Grid.Row="1" Text="0" HorizontalAlignment="Left" Margin="165, 30" FontSize="20" FontWeight="Bold"/>
+        <TextBlock x:Name="TimerTextBlock" Grid.Row="1" Text="Time: 180 Seconds" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"  Margin="30"/>
+        <TextBlock Grid.Row="1" Text="Total Submits:" FontSize="20" HorizontalAlignment="Left" FontWeight="Bold" Margin="25, 30"/>
 
-        <TextBlock x:Name="CounterTextBlock" Grid.Row="0" Text="0" HorizontalAlignment="Left" Margin="165, 30" FontSize="20" FontWeight="Bold"/>
-        <TextBlock x:Name="TimerTextBlock" Grid.Row="0" Text="Time: 180 Seconds" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"  Margin="30"/>
-        <TextBlock Grid.Row="0" Text="Total Submits:" FontSize="20" HorizontalAlignment="Left" FontWeight="Bold" Margin="25, 30"/>
-
-        <!-- Dots-->
+        <!-- Dots -->
         <Ellipse x:Name="topLeftDot" Width="15" Height="15" Fill="Black" Grid.Row="1" Margin="190,69,313.4,161.6"/>
         <Ellipse x:Name="topRightDot" Width="15" Height="15" Fill="Black" Grid.Row="1" Margin="313.4,69,190,161.6"/>
         <Ellipse x:Name="middleDot" Width="15" Height="15" Fill="Black" Grid.Row="1" Margin="252,130,251.4,100.6" Panel.ZIndex="1"/>
         <Ellipse x:Name="bottomLeftDot" Width="15" Height="15" Fill="Black" Grid.Row="1" Margin="190,193,313.4,37.6"/>
         <Ellipse x:Name="bottomRightDot" Width="15" Height="15" Fill="Black" Grid.Row="1" Margin="313,193,190.4,37.6"/>
 
-        <!-- Lines-->
+        <!-- Lines -->
         <Rectangle x:Name="line1" Stroke="Gray" StrokeThickness="2" Fill="Gray"
                    Width="110" Height="6" Margin="204,73,204.4,166.6"
                    Grid.Row="1" MouseLeftButtonDown="Line_MouseLeftButtonDown"

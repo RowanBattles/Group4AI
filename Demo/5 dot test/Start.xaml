@@ -7,10 +7,27 @@
         mc:Ignorable="d"
         Title="Start" Height="450" Width="800"
         WindowState="Maximized"
-        WindowStyle="None">
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        <TextBox HorizontalAlignment="Center" VerticalAlignment="Top" Height="50"   Margin="175" FontWeight="Bold" FontSize="45" BorderThickness="0" TextAlignment="Center" TextWrapping="Wrap" Text="Welcome to the 5 DOT test"/>
-        <Button Cursor="Hand" Content="START" Click="StartButton_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="200" Width="295" FontSize="80" FontWeight="Bold" BorderThickness="0"/>
-    </Grid>
+        <!-- Header -->
+        <Grid VerticalAlignment="Top" Height="100" Background="#FF2C6CA3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10" Grid.Column="0">
+                <Image Source="images/5dots.png" Height="50" Margin="10,0,0,0"/>
+                <TextBlock Text="5-point test" FontSize="24" FontWeight="Bold" VerticalAlignment="Center"/>
+            </StackPanel>
+            <Image Source="images/MaastrichtUni.png" Height="50" Margin="0,10,10,0" Grid.Column="2" HorizontalAlignment="Right"/>
+        </Grid>
 
+        <!-- Main Content -->
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock HorizontalAlignment="Center" Margin="10" FontWeight="Bold" FontSize="45" TextAlignment="Center" Text="Welcome to the 5 DOT test"/>
+            <Button Cursor="Hand" Content="START" Click="StartButton_Click" HorizontalAlignment="Center" Height="200" Width="295" FontSize="80" FontWeight="Bold" BorderThickness="0" Margin="20"/>
+        </StackPanel>
+    </Grid>
 </Window>
