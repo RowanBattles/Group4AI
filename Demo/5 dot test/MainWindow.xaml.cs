@@ -261,6 +261,10 @@ namespace FiveDotTest
                 writer.WriteLine();
             }
             MessageBox.Show($"Test succesfully exported!");
+;
+            Result result = new Result(uniquePatterns);
+            result.Show();
+            this.Close();
         }
     }
 }

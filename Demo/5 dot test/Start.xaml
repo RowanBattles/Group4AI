@@ -10,7 +10,7 @@
         WindowStyle="None">
     <Grid>
         <TextBox HorizontalAlignment="Center" VerticalAlignment="Top" Height="50"   Margin="175" FontWeight="Bold" FontSize="45" BorderThickness="0" TextAlignment="Center" TextWrapping="Wrap" Text="Welcome to the 5 DOT test"/>
-        <Button Content="START" Click="StartButton_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="200" Width="295" FontSize="80" FontWeight="Bold" BorderThickness="0"/>
+        <Button Cursor="Hand" Content="START" Click="StartButton_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="200" Width="295" FontSize="80" FontWeight="Bold" BorderThickness="0"/>
     </Grid>
 
 </Window>

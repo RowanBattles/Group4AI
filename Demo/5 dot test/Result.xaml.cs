@@ -21,10 +21,11 @@ namespace _5_dot_test
     /// </summary>
     public partial class Result : Window
     {
-        public Result()
+        public Result(int value)
         {
             InitializeComponent();
-            //PredictClusters();
+            TotalScore.Text = $"Total score: {value.ToString()}";
+            PredictClusters();
         }
 
         private void PredictClusters()
@@ -75,14 +76,22 @@ namespace _5_dot_test
                         {
                             result = "Unknown";
                         }
-                        MessageBox.Show(result, "Predictions");
+                        ResultGroup.Text = $"Result: {result}";
                     }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error: {ex.Message}");
+                ResultGroup.Text = "Error";
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Start start = new Start();
+            start.Show();
+            this.Close();
         }
     }
 }

@@ -28,15 +28,15 @@
         <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Border Background="#F0F0F0" Padding="50" CornerRadius="10">
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <TextBlock Text="Total score: 50" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
-                    <TextBlock Text="Result: Quick Thinker" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center"/>
+                    <TextBlock x:Name="TotalScore" Text="Total score: " FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                    <TextBlock x:Name="ResultGroup" Text="Result: Quick Thinker" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Border>
         </StackPanel>
 
         <!-- Footer -->
         <StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button Content="Back to start" Width="200" Height="50" FontSize="18" FontWeight="Bold"/>
+            <Button Cursor="Hand" BorderThickness="0" Content="Back to start" Width="200" Height="50" FontSize="18" FontWeight="Bold" Click="Button_Click"/>
         </StackPanel>
     </Grid>
 </Window>
