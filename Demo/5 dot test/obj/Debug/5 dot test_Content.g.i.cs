@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("counter.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/5dots.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/maastrichtuni.png")]
 
 

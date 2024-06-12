@@ -9,6 +9,34 @@
         WindowState="Maximized"
         WindowStyle="None">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border Grid.Row="0" Background="#FF336699">
+            <StackPanel Orientation="Horizontal"  VerticalAlignment="Center" Margin="10">
+                <Image Source="images/5dots.png" Height="50" Margin="10,0,0,0"/>
+                <TextBlock Text="5-point test" FontSize="24" FontWeight="Bold"  VerticalAlignment="Center"/>
+            </StackPanel>
+        </Border>
+        <Image Source="images/MaastrichtUni.png" Height="50" HorizontalAlignment="Right" Margin="45,10" />
+
+        <!-- Main Content -->
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Border Background="#F0F0F0" Padding="50" CornerRadius="10">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Total score: 50" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                    <TextBlock Text="Result: Quick Thinker" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+
+        <!-- Footer -->
+        <StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Content="Back to start" Width="200" Height="50" FontSize="18" FontWeight="Bold"/>
+        </StackPanel>
     </Grid>
 </Window>
