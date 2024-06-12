@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="Result" Height="450" Width="800"
         WindowState="Maximized"
-        WindowStyle="None">
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>

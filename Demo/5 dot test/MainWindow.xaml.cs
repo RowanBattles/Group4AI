@@ -1,6 +1,7 @@
 ﻿using _5_dot_test;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -190,29 +191,27 @@ namespace FiveDotTest
             if (timeLeft == 0)
             {
                 timer.Stop();
+                Submitbutton.IsEnabled = false;
                 MessageBox.Show("Time's up!");
             }
         }
 
         private void Line_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            if (timeLeft > 0)
-            {
-                Rectangle clickedRectangle = sender as Rectangle;
-                int index = int.Parse(clickedRectangle.Name.Replace("line", "")) - 1;
+            Rectangle clickedRectangle = sender as Rectangle;
+            int index = int.Parse(clickedRectangle.Name.Replace("line", "")) - 1;
 
-                if (lines[index].IsClicked)
-                {
-                    boxes[currentBox].Unclicks++;
-                    lines[index].IsClicked = false;
-                    clickedRectangle.Fill = new SolidColorBrush(Colors.Gray);
-                }
-                else
-                {
-                    boxes[currentBox].Clicks++;
-                    lines[index].IsClicked = true;
-                    clickedRectangle.Fill = new SolidColorBrush(Colors.LimeGreen);
-                }
+            if (lines[index].IsClicked)
+            {
+                boxes[currentBox].Unclicks++;
+                lines[index].IsClicked = false;
+                clickedRectangle.Fill = new SolidColorBrush(Colors.Gray);
+            }
+            else
+            {
+                boxes[currentBox].Clicks++;
+                lines[index].IsClicked = true;
+                clickedRectangle.Fill = new SolidColorBrush(Colors.LimeGreen);
             }
         }
 
@@ -230,41 +229,103 @@ namespace FiveDotTest
             }   
         }
 
-        private void Button_export(object sender, RoutedEventArgs e)
+        private async void Button_export(object sender, RoutedEventArgs e)
         {
-            CalculateTimegap();
-            string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "test.csv");
-            using (StreamWriter writer = new StreamWriter(filePath))
-            {
-                // Create header
-                writer.Write("pauses,unique_patterns_count,total_values_count,duplicates,empty_submissions,");
-                for (int i = 0; i < boxes.Length; i++)
-                {
-                    writer.Write($"Box_{i + 1}_Submissions,Box_{i + 1}_Lines,Box_{i + 1}_Clicks,Box_{i + 1}_Unclicks,Box_{i + 1}_Timegap");
-                    if (i < boxes.Length - 1)
-                    {
-                        writer.Write(",");
-                    }
-                }
-                writer.WriteLine();
+            ExportButton.IsEnabled = false;
+            string group = "";
+            var loadingWindow = new LoadingWindow();
+            loadingWindow.Show();
 
-                // Create value line
-                writer.Write($"{pauses},{uniquePatterns},{submissions},{duplicates},{emptySubmissions},");
-                for (int i = 0; i < boxes.Length; i++)
+            await Task.Run(() =>
+            {
+                CalculateTimegap();
+                string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "test.csv");
+                using (StreamWriter writer = new StreamWriter(filePath))
                 {
-                    writer.Write($"{boxes[i].Submissions},{boxes[i].Lines},{boxes[i].Clicks},{boxes[i].Unclicks},{boxes[i].TimeGap}");
-                    if (i < boxes.Length - 1)
+                    // Create header
+                    writer.Write("pauses,unique_patterns_count,total_values_count,duplicates,empty_submissions,");
+                    for (int i = 0; i < boxes.Length; i++)
                     {
-                        writer.Write(",");
+                        writer.Write($"Box_{i + 1}_Submissions,Box_{i + 1}_Lines,Box_{i + 1}_Clicks,Box_{i + 1}_Unclicks,Box_{i + 1}_Timegap");
+                        if (i < boxes.Length - 1)
+                        {
+                            writer.Write(",");
+                        }
+                    }
+                    writer.WriteLine();
+
+                    // Create value line
+                    writer.Write($"{pauses},{uniquePatterns},{submissions},{duplicates},{emptySubmissions},");
+                    for (int i = 0; i < boxes.Length; i++)
+                    {
+                        writer.Write($"{boxes[i].Submissions},{boxes[i].Lines},{boxes[i].Clicks},{boxes[i].Unclicks},{boxes[i].TimeGap}");
+                        if (i < boxes.Length - 1)
+                        {
+                            writer.Write(",");
+                        }
+                    }
+                    writer.WriteLine();
+                }
+
+                group = PredictClusters();
+            });
+;
+            Result result = new Result(uniquePatterns, group);
+            result.Show();
+            loadingWindow.Close();
+            this.Close();
+        }
+
+        private string PredictClusters()
+        {
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string pythonScript = System.IO.Path.Combine(currentDirectory, "..", "..", "PredictCluster.py"); // Name of your Python script
+            string pythonExecutable = @"C:\Users\rowan\AppData\Local\Programs\Python\Python311\python.exe";
+
+            ProcessStartInfo psi = new ProcessStartInfo();
+            psi.FileName = pythonExecutable;
+            psi.Arguments = $"\"{pythonScript}\"";
+            psi.UseShellExecute = false;
+            psi.RedirectStandardOutput = true;
+            psi.RedirectStandardError = true;
+            psi.CreateNoWindow = true;
+
+            try
+            {
+                using (Process process = Process.Start(psi))
+                {
+                    using (StreamReader reader = process.StandardOutput)
+                    {
+                        string result = reader.ReadToEnd();
+                        if (result == "0\r\n")
+                        {
+                            result = "Slow learner";
+                        }
+                        else if (result == "1\r\n")
+                        {
+                            result = "Quick thinker";
+                        }
+                        else if (result == "2\r\n")
+                        {
+                            result = "Complex thinker";
+                        }
+                        else if (result == "3\r\n")
+                        {
+                            result = "Hesitant student";
+                        }
+                        else
+                        {
+                            result = "Unknown";
+                        }
+                        return result;
                     }
                 }
-                writer.WriteLine();
             }
-            MessageBox.Show($"Test succesfully exported!");
-;
-            Result result = new Result(uniquePatterns);
-            result.Show();
-            this.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+                return "Error";
+            }
         }
     }
 }
