@@ -246,7 +246,7 @@ namespace FiveDotTest
                     writer.Write("pauses,unique_patterns_count,total_values_count,duplicates,empty_submissions,");
                     for (int i = 0; i < boxes.Length; i++)
                     {
-                        writer.Write($"Box_{i + 1}_Submissions,Box_{i + 1}_Lines,Box_{i + 1}_Clicks,Box_{i + 1}_Unclicks,Box_{i + 1}_Timegap");
+                        writer.Write($"Box_{i + 1}_Submission,Box_{i + 1}_Lines,Box_{i + 1}_Clicks,Box_{i + 1}_Unclicks,Box_{i + 1}_Timegap");
                         if (i < boxes.Length - 1)
                         {
                             writer.Write(",");
@@ -295,21 +295,23 @@ namespace FiveDotTest
                 using (Process process = Process.Start(psi))
                 {
                     using (StreamReader reader = process.StandardOutput)
+                    using (StreamReader errorReader = process.StandardError)
                     {
+                        string error = errorReader.ReadToEnd();
                         string result = reader.ReadToEnd();
-                        if (result == "0\r\n")
-                        {
-                            result = "Slow learner";
-                        }
-                        else if (result == "1\r\n")
+                        if (result == "[0]\r\n")
                         {
                             result = "Quick thinker";
                         }
-                        else if (result == "2\r\n")
+                        else if (result == "[1]\r\n")
+                        {
+                            result = "Slow learner";
+                        }
+                        else if (result == "[2]\r\n")
                         {
                             result = "Complex thinker";
                         }
-                        else if (result == "3\r\n")
+                        else if (result == "[3]\r\n")
                         {
                             result = "Hesitant student";
                         }
@@ -320,6 +322,7 @@ namespace FiveDotTest
                         return result;
                     }
                 }
+
             }
             catch (Exception ex)
             {
