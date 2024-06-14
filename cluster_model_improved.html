@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>cluster_model</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>cluster_model_improved</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7803,7 +7803,7 @@ Cluster '3': <em>Hesitant Student</em></p>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
-<style>#sk-container-id-17 {color: black;}#sk-container-id-17 pre{padding: 0;}#sk-container-id-17 div.sk-toggleable {background-color: white;}#sk-container-id-17 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-17 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-17 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-17 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-17 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-17 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-17 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-17 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-17 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-17 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-17 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-17 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-17 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-17 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-17 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-17 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-17 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-17 div.sk-item {position: relative;z-index: 1;}#sk-container-id-17 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-17 div.sk-item::before, #sk-container-id-17 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-17 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-17 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-17 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-17 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-17 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-17 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-17 div.sk-label-container {text-align: center;}#sk-container-id-17 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-17 div.sk-text-repr-fallback {display: none;}</style><div class="sk-top-container" id="sk-container-id-17"><div class="sk-text-repr-fallback"><pre>KNeighborsClassifier()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</br></b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator sk-toggleable"><input checked="" class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-19" type="checkbox"/><label class="sk-toggleable__label sk-toggleable__label-arrow" for="sk-estimator-id-19">KNeighborsClassifier</label><div class="sk-toggleable__content"><pre>KNeighborsClassifier()</pre></div></div></div></div></div>
+<style>#sk-container-id-1 {color: black;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div class="sk-top-container" id="sk-container-id-1"><div class="sk-text-repr-fallback"><pre>KNeighborsClassifier()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</br></b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator sk-toggleable"><input checked="" class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox"/><label class="sk-toggleable__label sk-toggleable__label-arrow" for="sk-estimator-id-1">KNeighborsClassifier</label><div class="sk-toggleable__content"><pre>KNeighborsClassifier()</pre></div></div></div></div></div>
 </div>
 </div>
 </div>
@@ -8416,10 +8416,10 @@ Name: Cluster, dtype: float64
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>The highest absolute value of correlation index is 0.409. Thus there will be four groups:</p>
 <ol>
-<li>Group A: All features</li>
-<li>Group B: Features where the absolute value of correlation index is higher than 0.1</li>
-<li>Group C: Features where the absolute value of correlation index is higher than 0.2</li>
-<li>Group D: Features where the absolute value of correlation index is higher than 0.3</li>
+<li>Feature A: All features</li>
+<li>Feature B: Features where the absolute value of correlation index is higher than 0.1</li>
+<li>Feature C: Features where the absolute value of correlation index is higher than 0.2</li>
+<li>Feature D: Features where the absolute value of correlation index is higher than 0.3</li>
 </ol>
 </div>
 </div>
@@ -8563,20 +8563,16 @@ Name: Cluster, dtype: float64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>However, based on the macro and weighted average values from the classification report of the baseline model (KNN), the uneven distribution of classes does not seem to introduce significant biases towards any particular class.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <blockquote>
 <blockquote>
-<p>Decision: Considering this, we have been careful about resampling the dataset. We used SMOTE to oversample the minority classes, but there was no significant improvement in the result. Since this notebook is also a school project, we have left the oversampling part commented for the sake of the learning outcome.</p>
+<p><font color="gold">Decision: Although the graphic show unevenly distributed classes. However, based on the macro and weighted average values from the classification report of the baseline model (KNN), the uneven distribution of classes <em><strong>does not seem to introduce significant biases</strong></em> towards any particular class. <br/>
+<br/>
+Considering this, we have been careful about resampling the dataset. We undersampled the dataset initially to see the result; there was a slight decrease in the dataset due to the loss of data. Then we used SMOTE to oversample the minority classes, but there was no significant improvement in the result. <br/>
+<br/>
+Since the uneven distribution is not causing major issue, we have decided not to try mixing both undersampling and oversampling and keep the distribution as it currently is. <br/>
+<br/>
+<em>Since this notebook is also a school project, we have left the oversampling part commented for the sake of the learning outcome.</em>
+</font></p>
 </blockquote>
 </blockquote>
 </div>
@@ -8590,7 +8586,26 @@ Name: Cluster, dtype: float64
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># from imblearn.over_sampling import SMOTE</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># from imblearn.under_sampling import RandomUnderSampler</span>
+<span class="c1"># from imblearn.over_sampling import SMOTE</span>
+
+<span class="c1"># how to color markdown text</span>
+<span class="c1"># &lt;font color='red'&gt;text&lt;/font&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># rus = RandomUnderSampler(random_state=42)</span>
+<span class="c1"># X_Group_A_train, y_train= rus.fit_resample(X_Group_A_train, y_train)</span>
 </pre></div>
 </div>
 </div>
@@ -8618,7 +8633,7 @@ Name: Cluster, dtype: float64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>From the <del>oversampled</del> split test and  train sets, we can filter the features to form the group of features. This is done here because when you later scale the features it will involve subtracting the mean values. Therefore, this helps prevent information leakage between feature groups. For example, if I scale all features together, information from one group may influence the scaling of another group, leading to inaccurate results:</p>
+<p>From the <del>resampled</del> split test and  train sets, we can filter the features to form the group of features. This is done here because when you later scale the features it will involve subtracting the mean values. Therefore, this helps prevent information leakage between feature groups. For example, if I scale all features together, information from one group may influence the scaling of another group, leading to inaccurate results:</p>
 </div>
 </div>
 </div>
@@ -8737,7 +8752,7 @@ Name: Cluster, dtype: float64
 <span class="n">svm_Group_A</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_Group_A_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 <span class="n">y_pred_svm</span> <span class="o">=</span> <span class="n">svm_Group_A</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_Group_A_test_scaled</span><span class="p">)</span>
 <span class="n">accuracy_svm</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_svm</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"SVM Accuracy for Group A: </span><span class="si">{</span><span class="n">accuracy_svm</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"SVM Accuracy for Model A: </span><span class="si">{</span><span class="n">accuracy_svm</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8750,7 +8765,7 @@ Name: Cluster, dtype: float64
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>SVM Accuracy for Group A: 96.36%
+<pre>SVM Accuracy for Model A: 96.36%
 </pre>
 </div>
 </div>
@@ -8769,7 +8784,7 @@ Name: Cluster, dtype: float64
 <span class="n">svm_Group_B</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_Group_B_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 <span class="n">y_pred_svm</span> <span class="o">=</span> <span class="n">svm_Group_B</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_Group_B_test_scaled</span><span class="p">)</span>
 <span class="n">accuracy_svm</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_svm</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"SVM Accuracy for Group B: </span><span class="si">{</span><span class="n">accuracy_svm</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"SVM Accuracy for Model B: </span><span class="si">{</span><span class="n">accuracy_svm</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8782,7 +8797,7 @@ Name: Cluster, dtype: float64
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>SVM Accuracy for Group B: 95.36%
+<pre>SVM Accuracy for Model B: 95.36%
 </pre>
 </div>
 </div>
@@ -8801,7 +8816,7 @@ Name: Cluster, dtype: float64
 <span class="n">svm_Group_C</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_Group_C_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 <span class="n">y_pred_svm</span> <span class="o">=</span> <span class="n">svm_Group_C</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_Group_C_test_scaled</span><span class="p">)</span>
 <span class="n">accuracy_svm</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_svm</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"SVM Accuracy for Group C: </span><span class="si">{</span><span class="n">accuracy_svm</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"SVM Accuracy for Model C: </span><span class="si">{</span><span class="n">accuracy_svm</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8814,7 +8829,7 @@ Name: Cluster, dtype: float64
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>SVM Accuracy for Group C: 91.28%
+<pre>SVM Accuracy for Model C: 91.28%
 </pre>
 </div>
 </div>
@@ -8833,7 +8848,7 @@ Name: Cluster, dtype: float64
 <span class="n">svm_Group_D</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_Group_D_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 <span class="n">y_pred_svm</span> <span class="o">=</span> <span class="n">svm_Group_D</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_Group_D_test_scaled</span><span class="p">)</span>
 <span class="n">accuracy_svm</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_svm</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"SVM Accuracy for Group D: </span><span class="si">{</span><span class="n">accuracy_svm</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"SVM Accuracy for Model D: </span><span class="si">{</span><span class="n">accuracy_svm</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8846,7 +8861,7 @@ Name: Cluster, dtype: float64
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>SVM Accuracy for Group D: 82.67%
+<pre>SVM Accuracy for Model D: 82.67%
 </pre>
 </div>
 </div>
@@ -8859,7 +8874,7 @@ Name: Cluster, dtype: float64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Conclusion"><em><strong>Conclusion</strong></em><a class="anchor-link" href="#Conclusion">¶</a></h4><p>Based on a brief accuracy check, we noticed a slight drop in accuracy from Group A to Group B, around 1.0%, and a larger decrease of about 4% from Group B to Group C. Group D had the lowest accuracy, coming in at 82%.</p>
+<h4 id="Conclusion"><em><strong>Conclusion</strong></em><a class="anchor-link" href="#Conclusion">¶</a></h4><p>Based on a brief accuracy check, we noticed a slight drop in accuracy from Model A to Model B, around 1.0%, and a larger decrease of about 4% from Model B to Model C. Model D had the lowest accuracy, coming in at 82%.</p>
 </div>
 </div>
 </div>
@@ -8872,7 +8887,7 @@ Name: Cluster, dtype: float64
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <blockquote>
 <blockquote>
-<p>Decision: Even features with a correlation index (absolute value) below 0.1 still play a role in how well our model predicts outcomes. Since Support Vector Machine tends to handle lots of features well, we've decided to stick with Group A features for our final model. In Group A, we haven't dropped any features, so we're using all available data to build the final model.</p>
+<p>Decision: Even features with a correlation index (absolute value) below 0.1 still play a role in how well our model predicts outcomes. Since Support Vector Machine tends to handle lots of features well, we've decided to stick with Model A features for our final model. In Model A, we haven't dropped any features, so we're using all available data to build the final model.</p>
 </blockquote>
 </blockquote>
 </div>
@@ -8896,7 +8911,7 @@ Name: Cluster, dtype: float64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="1.-Classification-Report-for-train-and-test-set-of-Group-A-features:"><em><strong>1. Classification Report for train and test set of Group A features:</strong></em><a class="anchor-link" href="#1.-Classification-Report-for-train-and-test-set-of-Group-A-features:">¶</a></h2><p>By comparing two reports, we can see if there is a sign of overfitting, model's generalization capacity and the model's performance.</p>
+<h2 id="1.-Classification-Report-for-train-and-test-set-of-Model-A:"><em><strong>1. Classification Report for train and test set of Model A:</strong></em><a class="anchor-link" href="#1.-Classification-Report-for-train-and-test-set-of-Model-A:">¶</a></h2><p>By comparing two reports, we can see if there is a sign of overfitting, model's generalization capacity and the model's performance.</p>
 </div>
 </div>
 </div>
@@ -8911,15 +8926,15 @@ Name: Cluster, dtype: float64
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># find overfitting by comparing the accuracy of the model on the training data and the test data</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">svm_Group_A</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_Group_A_train_scaled</span><span class="p">)</span>
 <span class="n">a_accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"SVM Accuracy on training data for Group A: </span><span class="si">{</span><span class="n">a_accuracy</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"SVM Accuracy on training data for Model A: </span><span class="si">{</span><span class="n">a_accuracy</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">svm_Group_A</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_Group_A_test_scaled</span><span class="p">)</span>
 <span class="n">b_accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"SVM Accuracy on test data for Group A: </span><span class="si">{</span><span class="n">b_accuracy</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"SVM Accuracy on test data for Model A: </span><span class="si">{</span><span class="n">b_accuracy</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
 <span class="c1"># print the classification report for the training data</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Training classification report for Group A:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">a</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Training classification report for Model A:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">a</span><span class="p">))</span>
 <span class="c1"># print the classification report for the test data</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Test classification report for Group A:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Test classification report for Model A:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -8932,9 +8947,9 @@ Name: Cluster, dtype: float64
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>SVM Accuracy on training data for Group A: 0.998068
-SVM Accuracy on test data for Group A: 0.963576
-Training classification report for Group A:
+<pre>SVM Accuracy on training data for Model A: 0.998068
+SVM Accuracy on test data for Model A: 0.963576
+Training classification report for Model A:
                precision    recall  f1-score   support
 
            0       1.00      1.00      1.00       723
@@ -8946,7 +8961,7 @@ Training classification report for Group A:
    macro avg       1.00      1.00      1.00      3623
 weighted avg       1.00      1.00      1.00      3623
 
-Test classification report for Group A:
+Test classification report for Model A:
                precision    recall  f1-score   support
 
            0       0.99      0.97      0.98       153
@@ -8981,7 +8996,7 @@ weighted avg       0.96      0.96      0.96       906
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="2.-Confusion-matrix-of-the-model-of-Group-A-features:"><em><strong>2. Confusion matrix of the model of Group A features:</strong></em><a class="anchor-link" href="#2.-Confusion-matrix-of-the-model-of-Group-A-features:">¶</a></h2>
+<h2 id="2.-Confusion-matrix-of-the-model-of-Model-A:"><em><strong>2. Confusion matrix of the model of Model A:</strong></em><a class="anchor-link" href="#2.-Confusion-matrix-of-the-model-of-Model-A:">¶</a></h2>
 </div>
 </div>
 </div>
@@ -9036,7 +9051,7 @@ weighted avg       0.96      0.96      0.96       906
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="2.-Cross-Validation-of-the-model-of-Group-A-features:"><em><strong>2. Cross Validation of the model of Group A features:</strong></em><a class="anchor-link" href="#2.-Cross-Validation-of-the-model-of-Group-A-features:">¶</a></h2>
+<h2 id="2.-Cross-Validation-of-the-model-of-Model-A:"><em><strong>2. Cross Validation of the model of Model A:</strong></em><a class="anchor-link" href="#2.-Cross-Validation-of-the-model-of-Model-A:">¶</a></h2>
 </div>
 </div>
 </div>
@@ -9155,7 +9170,15 @@ SVM Cross Validation Standard Deviation: 0.00968056161631825
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>As a starting point, we will use these parameters as parameters.</p>
+<blockquote>
+<blockquote>
+<p><font color="gold">As a starting point, we will use these parameters as parameters. <br/>
+<br/>
+For the kernel rbf is chosen because <a href="https://medium.com/analytics-vidhya/introduction-to-svm-and-kernel-trick-part-1-theory-d990e2872ace#:~:text=The%20RBF%20kernel%20is%20the%20most%20widely%20used%20kernel%20concept%20to%20solve%20the%20problem%20of%20classifying%20datasets%20that%20cannot%20be%20separated%20linearly.">the RBF kernel is the most widely used kernel concept to solve the problem of classifying datasets that cannot be separated linearly.</a><br/>
+<br/>
+When training an SVM with the Radial Basis Function (RBF) kernel, <a href="https://scikit-learn.org/stable/modules/svm.html#:~:text=When%20training%20an%20SVM%20with%20the%20Radial%20Basis%20Function%20(RBF">two parameters must be considered</a>%20kernel%2C%20two%20parameters%20must%20be%20considered%3A%20C%20and%20gamma.): C and gamma.</font></p>
+</blockquote>
+</blockquote>
 </div>
 </div>
 </div>
@@ -9167,7 +9190,7 @@ SVM Cross Validation Standard Deviation: 0.00968056161631825
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'C'</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> <span class="s1">'gamma'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">],</span> <span class="s1">'kernel'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'rbf'</span><span class="p">,</span> <span class="s1">'poly'</span><span class="p">,</span> <span class="s1">'sigmoid'</span><span class="p">]}</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'C'</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s1">'gamma'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">],</span> <span class="s1">'kernel'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'rbf'</span><span class="p">]}</span>
 </pre></div>
 </div>
 </div>
@@ -9218,7 +9241,21 @@ SVM Cross Validation Standard Deviation: 0.00968056161631825
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">X_scaled</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">X_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -9256,260 +9293,100 @@ SVM Cross Validation Standard Deviation: 0.00968056161631825
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Fitting 5 folds for each of 48 candidates, totalling 240 fits
-[CV] END .........................C=0.1, gamma=1, kernel=rbf; total time=   3.6s
-[CV] END .........................C=0.1, gamma=1, kernel=rbf; total time=   3.8s
-[CV] END .........................C=0.1, gamma=1, kernel=rbf; total time=   3.6s
-[CV] END .........................C=0.1, gamma=1, kernel=rbf; total time=   3.6s
-[CV] END .........................C=0.1, gamma=1, kernel=rbf; total time=   3.9s
-[CV] END ........................C=0.1, gamma=1, kernel=poly; total time=   0.8s
-[CV] END ........................C=0.1, gamma=1, kernel=poly; total time=   0.8s
-[CV] END ........................C=0.1, gamma=1, kernel=poly; total time=   0.8s
-[CV] END ........................C=0.1, gamma=1, kernel=poly; total time=   1.0s
-[CV] END ........................C=0.1, gamma=1, kernel=poly; total time=   1.1s
-[CV] END .....................C=0.1, gamma=1, kernel=sigmoid; total time=   1.5s
-[CV] END .....................C=0.1, gamma=1, kernel=sigmoid; total time=   1.8s
-[CV] END .....................C=0.1, gamma=1, kernel=sigmoid; total time=   1.6s
-[CV] END .....................C=0.1, gamma=1, kernel=sigmoid; total time=   1.6s
-[CV] END .....................C=0.1, gamma=1, kernel=sigmoid; total time=   1.6s
-[CV] END .......................C=0.1, gamma=0.1, kernel=rbf; total time=   4.2s
-[CV] END .......................C=0.1, gamma=0.1, kernel=rbf; total time=   4.1s
+<pre>Fitting 5 folds for each of 16 candidates, totalling 80 fits
+[CV] END .........................C=0.1, gamma=1, kernel=rbf; total time=   3.3s
+[CV] END .........................C=0.1, gamma=1, kernel=rbf; total time=   3.5s
+[CV] END .........................C=0.1, gamma=1, kernel=rbf; total time=   3.4s
+[CV] END .........................C=0.1, gamma=1, kernel=rbf; total time=   2.9s
+[CV] END .........................C=0.1, gamma=1, kernel=rbf; total time=   2.9s
+[CV] END .......................C=0.1, gamma=0.1, kernel=rbf; total time=   3.2s
 [CV] END .......................C=0.1, gamma=0.1, kernel=rbf; total time=   4.4s
 [CV] END .......................C=0.1, gamma=0.1, kernel=rbf; total time=   3.8s
-[CV] END .......................C=0.1, gamma=0.1, kernel=rbf; total time=   4.4s
-[CV] END ......................C=0.1, gamma=0.1, kernel=poly; total time=   0.7s
-[CV] END ......................C=0.1, gamma=0.1, kernel=poly; total time=   0.9s
-[CV] END ......................C=0.1, gamma=0.1, kernel=poly; total time=   0.9s
-[CV] END ......................C=0.1, gamma=0.1, kernel=poly; total time=   1.0s
-[CV] END ......................C=0.1, gamma=0.1, kernel=poly; total time=   0.9s
-[CV] END ...................C=0.1, gamma=0.1, kernel=sigmoid; total time=   1.7s
-[CV] END ...................C=0.1, gamma=0.1, kernel=sigmoid; total time=   1.9s
-[CV] END ...................C=0.1, gamma=0.1, kernel=sigmoid; total time=   1.5s
-[CV] END ...................C=0.1, gamma=0.1, kernel=sigmoid; total time=   1.9s
-[CV] END ...................C=0.1, gamma=0.1, kernel=sigmoid; total time=   1.8s
+[CV] END .......................C=0.1, gamma=0.1, kernel=rbf; total time=   3.4s
+[CV] END .......................C=0.1, gamma=0.1, kernel=rbf; total time=   5.0s
 [CV] END ......................C=0.1, gamma=0.01, kernel=rbf; total time=   1.7s
-[CV] END ......................C=0.1, gamma=0.01, kernel=rbf; total time=   1.8s
-[CV] END ......................C=0.1, gamma=0.01, kernel=rbf; total time=   1.9s
-[CV] END ......................C=0.1, gamma=0.01, kernel=rbf; total time=   2.0s
-[CV] END ......................C=0.1, gamma=0.01, kernel=rbf; total time=   1.7s
-[CV] END .....................C=0.1, gamma=0.01, kernel=poly; total time=   1.7s
-[CV] END .....................C=0.1, gamma=0.01, kernel=poly; total time=   1.8s
-[CV] END .....................C=0.1, gamma=0.01, kernel=poly; total time=   1.8s
-[CV] END .....................C=0.1, gamma=0.01, kernel=poly; total time=   1.6s
-[CV] END .....................C=0.1, gamma=0.01, kernel=poly; total time=   1.8s
-[CV] END ..................C=0.1, gamma=0.01, kernel=sigmoid; total time=   1.1s
-[CV] END ..................C=0.1, gamma=0.01, kernel=sigmoid; total time=   1.3s
-[CV] END ..................C=0.1, gamma=0.01, kernel=sigmoid; total time=   1.1s
-[CV] END ..................C=0.1, gamma=0.01, kernel=sigmoid; total time=   1.1s
-[CV] END ..................C=0.1, gamma=0.01, kernel=sigmoid; total time=   1.0s
-[CV] END .....................C=0.1, gamma=0.001, kernel=rbf; total time=   2.4s
-[CV] END .....................C=0.1, gamma=0.001, kernel=rbf; total time=   2.3s
-[CV] END .....................C=0.1, gamma=0.001, kernel=rbf; total time=   2.2s
-[CV] END .....................C=0.1, gamma=0.001, kernel=rbf; total time=   2.7s
-[CV] END .....................C=0.1, gamma=0.001, kernel=rbf; total time=   2.1s
-[CV] END ....................C=0.1, gamma=0.001, kernel=poly; total time=   2.3s
-[CV] END ....................C=0.1, gamma=0.001, kernel=poly; total time=   2.5s
-[CV] END ....................C=0.1, gamma=0.001, kernel=poly; total time=   2.7s
-[CV] END ....................C=0.1, gamma=0.001, kernel=poly; total time=   2.4s
-[CV] END ....................C=0.1, gamma=0.001, kernel=poly; total time=   2.4s
-[CV] END .................C=0.1, gamma=0.001, kernel=sigmoid; total time=   2.2s
-[CV] END .................C=0.1, gamma=0.001, kernel=sigmoid; total time=   2.3s
-[CV] END .................C=0.1, gamma=0.001, kernel=sigmoid; total time=   2.1s
-[CV] END .................C=0.1, gamma=0.001, kernel=sigmoid; total time=   1.9s
-[CV] END .................C=0.1, gamma=0.001, kernel=sigmoid; total time=   2.0s
-[CV] END ...........................C=1, gamma=1, kernel=rbf; total time=   4.5s
+[CV] END ......................C=0.1, gamma=0.01, kernel=rbf; total time=   1.6s
+[CV] END ......................C=0.1, gamma=0.01, kernel=rbf; total time=   1.6s
+[CV] END ......................C=0.1, gamma=0.01, kernel=rbf; total time=   1.5s
+[CV] END ......................C=0.1, gamma=0.01, kernel=rbf; total time=   1.5s
+[CV] END ......................C=0.1, gamma=0.02, kernel=rbf; total time=   2.0s
+[CV] END ......................C=0.1, gamma=0.02, kernel=rbf; total time=   1.8s
+[CV] END ......................C=0.1, gamma=0.02, kernel=rbf; total time=   1.9s
+[CV] END ......................C=0.1, gamma=0.02, kernel=rbf; total time=   1.8s
+[CV] END ......................C=0.1, gamma=0.02, kernel=rbf; total time=   2.2s
+[CV] END ...........................C=1, gamma=1, kernel=rbf; total time=   3.6s
+[CV] END ...........................C=1, gamma=1, kernel=rbf; total time=   3.2s
+[CV] END ...........................C=1, gamma=1, kernel=rbf; total time=   3.4s
+[CV] END ...........................C=1, gamma=1, kernel=rbf; total time=   3.5s
 [CV] END ...........................C=1, gamma=1, kernel=rbf; total time=   3.7s
-[CV] END ...........................C=1, gamma=1, kernel=rbf; total time=   4.1s
-[CV] END ...........................C=1, gamma=1, kernel=rbf; total time=   4.5s
-[CV] END ...........................C=1, gamma=1, kernel=rbf; total time=   4.6s
-[CV] END ..........................C=1, gamma=1, kernel=poly; total time=   0.9s
-[CV] END ..........................C=1, gamma=1, kernel=poly; total time=   0.7s
-[CV] END ..........................C=1, gamma=1, kernel=poly; total time=   0.9s
-[CV] END ..........................C=1, gamma=1, kernel=poly; total time=   0.9s
-[CV] END ..........................C=1, gamma=1, kernel=poly; total time=   1.0s
-[CV] END .......................C=1, gamma=1, kernel=sigmoid; total time=   1.1s
-[CV] END .......................C=1, gamma=1, kernel=sigmoid; total time=   1.3s
-[CV] END .......................C=1, gamma=1, kernel=sigmoid; total time=   1.1s
-[CV] END .......................C=1, gamma=1, kernel=sigmoid; total time=   1.2s
-[CV] END .......................C=1, gamma=1, kernel=sigmoid; total time=   1.4s
-[CV] END .........................C=1, gamma=0.1, kernel=rbf; total time=   4.5s
-[CV] END .........................C=1, gamma=0.1, kernel=rbf; total time=   4.1s
-[CV] END .........................C=1, gamma=0.1, kernel=rbf; total time=   4.6s
-[CV] END .........................C=1, gamma=0.1, kernel=rbf; total time=   4.5s
-[CV] END .........................C=1, gamma=0.1, kernel=rbf; total time=   4.5s
-[CV] END ........................C=1, gamma=0.1, kernel=poly; total time=   0.9s
-[CV] END ........................C=1, gamma=0.1, kernel=poly; total time=   1.0s
-[CV] END ........................C=1, gamma=0.1, kernel=poly; total time=   0.9s
-[CV] END ........................C=1, gamma=0.1, kernel=poly; total time=   0.8s
-[CV] END ........................C=1, gamma=0.1, kernel=poly; total time=   1.0s
-[CV] END .....................C=1, gamma=0.1, kernel=sigmoid; total time=   1.6s
-[CV] END .....................C=1, gamma=0.1, kernel=sigmoid; total time=   1.1s
-[CV] END .....................C=1, gamma=0.1, kernel=sigmoid; total time=   1.7s
-[CV] END .....................C=1, gamma=0.1, kernel=sigmoid; total time=   1.6s
-[CV] END .....................C=1, gamma=0.1, kernel=sigmoid; total time=   1.4s
+[CV] END .........................C=1, gamma=0.1, kernel=rbf; total time=   4.3s
+[CV] END .........................C=1, gamma=0.1, kernel=rbf; total time=   3.8s
+[CV] END .........................C=1, gamma=0.1, kernel=rbf; total time=   4.0s
+[CV] END .........................C=1, gamma=0.1, kernel=rbf; total time=   3.8s
+[CV] END .........................C=1, gamma=0.1, kernel=rbf; total time=   3.6s
+[CV] END ........................C=1, gamma=0.01, kernel=rbf; total time=   0.7s
+[CV] END ........................C=1, gamma=0.01, kernel=rbf; total time=   0.7s
 [CV] END ........................C=1, gamma=0.01, kernel=rbf; total time=   0.8s
-[CV] END ........................C=1, gamma=0.01, kernel=rbf; total time=   0.8s
-[CV] END ........................C=1, gamma=0.01, kernel=rbf; total time=   1.3s
-[CV] END ........................C=1, gamma=0.01, kernel=rbf; total time=   1.2s
-[CV] END ........................C=1, gamma=0.01, kernel=rbf; total time=   1.1s
-[CV] END .......................C=1, gamma=0.01, kernel=poly; total time=   1.2s
-[CV] END .......................C=1, gamma=0.01, kernel=poly; total time=   1.0s
-[CV] END .......................C=1, gamma=0.01, kernel=poly; total time=   1.2s
-[CV] END .......................C=1, gamma=0.01, kernel=poly; total time=   1.3s
-[CV] END .......................C=1, gamma=0.01, kernel=poly; total time=   1.2s
-[CV] END ....................C=1, gamma=0.01, kernel=sigmoid; total time=   0.8s
-[CV] END ....................C=1, gamma=0.01, kernel=sigmoid; total time=   0.8s
-[CV] END ....................C=1, gamma=0.01, kernel=sigmoid; total time=   0.6s
-[CV] END ....................C=1, gamma=0.01, kernel=sigmoid; total time=   0.4s
-[CV] END ....................C=1, gamma=0.01, kernel=sigmoid; total time=   0.4s
-[CV] END .......................C=1, gamma=0.001, kernel=rbf; total time=   1.2s
-[CV] END .......................C=1, gamma=0.001, kernel=rbf; total time=   1.1s
-[CV] END .......................C=1, gamma=0.001, kernel=rbf; total time=   1.2s
-[CV] END .......................C=1, gamma=0.001, kernel=rbf; total time=   1.1s
-[CV] END .......................C=1, gamma=0.001, kernel=rbf; total time=   1.1s
-[CV] END ......................C=1, gamma=0.001, kernel=poly; total time=   2.3s
-[CV] END ......................C=1, gamma=0.001, kernel=poly; total time=   3.4s
-[CV] END ......................C=1, gamma=0.001, kernel=poly; total time=   2.6s
-[CV] END ......................C=1, gamma=0.001, kernel=poly; total time=   2.7s
-[CV] END ......................C=1, gamma=0.001, kernel=poly; total time=   2.7s
-[CV] END ...................C=1, gamma=0.001, kernel=sigmoid; total time=   1.6s
-[CV] END ...................C=1, gamma=0.001, kernel=sigmoid; total time=   1.1s
-[CV] END ...................C=1, gamma=0.001, kernel=sigmoid; total time=   1.0s
-[CV] END ...................C=1, gamma=0.001, kernel=sigmoid; total time=   1.0s
-[CV] END ...................C=1, gamma=0.001, kernel=sigmoid; total time=   1.0s
-[CV] END ..........................C=10, gamma=1, kernel=rbf; total time=   4.7s
-[CV] END ..........................C=10, gamma=1, kernel=rbf; total time=   4.2s
-[CV] END ..........................C=10, gamma=1, kernel=rbf; total time=   4.0s
-[CV] END ..........................C=10, gamma=1, kernel=rbf; total time=   3.9s
-[CV] END ..........................C=10, gamma=1, kernel=rbf; total time=   4.2s
-[CV] END .........................C=10, gamma=1, kernel=poly; total time=   0.9s
-[CV] END .........................C=10, gamma=1, kernel=poly; total time=   0.8s
-[CV] END .........................C=10, gamma=1, kernel=poly; total time=   0.8s
-[CV] END .........................C=10, gamma=1, kernel=poly; total time=   0.7s
-[CV] END .........................C=10, gamma=1, kernel=poly; total time=   0.7s
-[CV] END ......................C=10, gamma=1, kernel=sigmoid; total time=   1.4s
-[CV] END ......................C=10, gamma=1, kernel=sigmoid; total time=   1.4s
-[CV] END ......................C=10, gamma=1, kernel=sigmoid; total time=   1.1s
-[CV] END ......................C=10, gamma=1, kernel=sigmoid; total time=   1.3s
-[CV] END ......................C=10, gamma=1, kernel=sigmoid; total time=   1.2s
-[CV] END ........................C=10, gamma=0.1, kernel=rbf; total time=   4.1s
-[CV] END ........................C=10, gamma=0.1, kernel=rbf; total time=   4.1s
-[CV] END ........................C=10, gamma=0.1, kernel=rbf; total time=   4.8s
-[CV] END ........................C=10, gamma=0.1, kernel=rbf; total time=   4.2s
-[CV] END ........................C=10, gamma=0.1, kernel=rbf; total time=   4.4s
-[CV] END .......................C=10, gamma=0.1, kernel=poly; total time=   0.7s
-[CV] END .......................C=10, gamma=0.1, kernel=poly; total time=   0.8s
-[CV] END .......................C=10, gamma=0.1, kernel=poly; total time=   0.9s
-[CV] END .......................C=10, gamma=0.1, kernel=poly; total time=   1.0s
-[CV] END .......................C=10, gamma=0.1, kernel=poly; total time=   1.0s
-[CV] END ....................C=10, gamma=0.1, kernel=sigmoid; total time=   1.6s
-[CV] END ....................C=10, gamma=0.1, kernel=sigmoid; total time=   1.9s
-[CV] END ....................C=10, gamma=0.1, kernel=sigmoid; total time=   1.4s
-[CV] END ....................C=10, gamma=0.1, kernel=sigmoid; total time=   1.4s
-[CV] END ....................C=10, gamma=0.1, kernel=sigmoid; total time=   1.5s
-[CV] END .......................C=10, gamma=0.01, kernel=rbf; total time=   1.1s
-[CV] END .......................C=10, gamma=0.01, kernel=rbf; total time=   1.2s
-[CV] END .......................C=10, gamma=0.01, kernel=rbf; total time=   1.2s
-[CV] END .......................C=10, gamma=0.01, kernel=rbf; total time=   1.0s
-[CV] END .......................C=10, gamma=0.01, kernel=rbf; total time=   0.9s
-[CV] END ......................C=10, gamma=0.01, kernel=poly; total time=   1.0s
-[CV] END ......................C=10, gamma=0.01, kernel=poly; total time=   1.1s
-[CV] END ......................C=10, gamma=0.01, kernel=poly; total time=   1.1s
-[CV] END ......................C=10, gamma=0.01, kernel=poly; total time=   1.0s
-[CV] END ......................C=10, gamma=0.01, kernel=poly; total time=   0.9s
-[CV] END ...................C=10, gamma=0.01, kernel=sigmoid; total time=   0.2s
-[CV] END ...................C=10, gamma=0.01, kernel=sigmoid; total time=   0.2s
-[CV] END ...................C=10, gamma=0.01, kernel=sigmoid; total time=   0.3s
-[CV] END ...................C=10, gamma=0.01, kernel=sigmoid; total time=   0.2s
-[CV] END ...................C=10, gamma=0.01, kernel=sigmoid; total time=   0.2s
-[CV] END ......................C=10, gamma=0.001, kernel=rbf; total time=   0.4s
-[CV] END ......................C=10, gamma=0.001, kernel=rbf; total time=   0.6s
-[CV] END ......................C=10, gamma=0.001, kernel=rbf; total time=   0.5s
-[CV] END ......................C=10, gamma=0.001, kernel=rbf; total time=   0.6s
-[CV] END ......................C=10, gamma=0.001, kernel=rbf; total time=   0.6s
-[CV] END .....................C=10, gamma=0.001, kernel=poly; total time=   2.3s
-[CV] END .....................C=10, gamma=0.001, kernel=poly; total time=   2.5s
-[CV] END .....................C=10, gamma=0.001, kernel=poly; total time=   2.3s
-[CV] END .....................C=10, gamma=0.001, kernel=poly; total time=   3.2s
-[CV] END .....................C=10, gamma=0.001, kernel=poly; total time=   2.6s
-[CV] END ..................C=10, gamma=0.001, kernel=sigmoid; total time=   0.6s
-[CV] END ..................C=10, gamma=0.001, kernel=sigmoid; total time=   0.6s
-[CV] END ..................C=10, gamma=0.001, kernel=sigmoid; total time=   0.5s
-[CV] END ..................C=10, gamma=0.001, kernel=sigmoid; total time=   0.5s
-[CV] END ..................C=10, gamma=0.001, kernel=sigmoid; total time=   0.4s
-[CV] END .........................C=100, gamma=1, kernel=rbf; total time=   4.8s
-[CV] END .........................C=100, gamma=1, kernel=rbf; total time=   5.1s
-[CV] END .........................C=100, gamma=1, kernel=rbf; total time=   5.1s
-[CV] END .........................C=100, gamma=1, kernel=rbf; total time=   4.4s
-[CV] END .........................C=100, gamma=1, kernel=rbf; total time=   6.0s
-[CV] END ........................C=100, gamma=1, kernel=poly; total time=   1.3s
-[CV] END ........................C=100, gamma=1, kernel=poly; total time=   1.5s
-[CV] END ........................C=100, gamma=1, kernel=poly; total time=   1.0s
-[CV] END ........................C=100, gamma=1, kernel=poly; total time=   1.4s
-[CV] END ........................C=100, gamma=1, kernel=poly; total time=   1.0s
-[CV] END .....................C=100, gamma=1, kernel=sigmoid; total time=   1.9s
-[CV] END .....................C=100, gamma=1, kernel=sigmoid; total time=   1.6s
-[CV] END .....................C=100, gamma=1, kernel=sigmoid; total time=   1.7s
-[CV] END .....................C=100, gamma=1, kernel=sigmoid; total time=   1.4s
-[CV] END .....................C=100, gamma=1, kernel=sigmoid; total time=   1.5s
-[CV] END .......................C=100, gamma=0.1, kernel=rbf; total time=   5.1s
-[CV] END .......................C=100, gamma=0.1, kernel=rbf; total time=   4.9s
-[CV] END .......................C=100, gamma=0.1, kernel=rbf; total time=   4.3s
-[CV] END .......................C=100, gamma=0.1, kernel=rbf; total time=   3.7s
-[CV] END .......................C=100, gamma=0.1, kernel=rbf; total time=   3.5s
-[CV] END ......................C=100, gamma=0.1, kernel=poly; total time=   0.6s
-[CV] END ......................C=100, gamma=0.1, kernel=poly; total time=   0.8s
-[CV] END ......................C=100, gamma=0.1, kernel=poly; total time=   0.8s
-[CV] END ......................C=100, gamma=0.1, kernel=poly; total time=   0.7s
-[CV] END ......................C=100, gamma=0.1, kernel=poly; total time=   0.8s
-[CV] END ...................C=100, gamma=0.1, kernel=sigmoid; total time=   1.2s
-[CV] END ...................C=100, gamma=0.1, kernel=sigmoid; total time=   1.1s
-[CV] END ...................C=100, gamma=0.1, kernel=sigmoid; total time=   1.2s
-[CV] END ...................C=100, gamma=0.1, kernel=sigmoid; total time=   1.3s
-[CV] END ...................C=100, gamma=0.1, kernel=sigmoid; total time=   1.1s
-[CV] END ......................C=100, gamma=0.01, kernel=rbf; total time=   0.7s
-[CV] END ......................C=100, gamma=0.01, kernel=rbf; total time=   0.7s
-[CV] END ......................C=100, gamma=0.01, kernel=rbf; total time=   0.8s
-[CV] END ......................C=100, gamma=0.01, kernel=rbf; total time=   0.8s
-[CV] END ......................C=100, gamma=0.01, kernel=rbf; total time=   0.7s
-[CV] END .....................C=100, gamma=0.01, kernel=poly; total time=   0.8s
-[CV] END .....................C=100, gamma=0.01, kernel=poly; total time=   0.7s
-[CV] END .....................C=100, gamma=0.01, kernel=poly; total time=   0.8s
-[CV] END .....................C=100, gamma=0.01, kernel=poly; total time=   0.7s
-[CV] END .....................C=100, gamma=0.01, kernel=poly; total time=   0.9s
-[CV] END ..................C=100, gamma=0.01, kernel=sigmoid; total time=   0.1s
-[CV] END ..................C=100, gamma=0.01, kernel=sigmoid; total time=   0.2s
-[CV] END ..................C=100, gamma=0.01, kernel=sigmoid; total time=   0.1s
-[CV] END ..................C=100, gamma=0.01, kernel=sigmoid; total time=   0.2s
-[CV] END ..................C=100, gamma=0.01, kernel=sigmoid; total time=   0.2s
-[CV] END .....................C=100, gamma=0.001, kernel=rbf; total time=   0.4s
-[CV] END .....................C=100, gamma=0.001, kernel=rbf; total time=   0.3s
-[CV] END .....................C=100, gamma=0.001, kernel=rbf; total time=   0.3s
-[CV] END .....................C=100, gamma=0.001, kernel=rbf; total time=   0.4s
-[CV] END .....................C=100, gamma=0.001, kernel=rbf; total time=   0.3s
-[CV] END ....................C=100, gamma=0.001, kernel=poly; total time=   1.5s
-[CV] END ....................C=100, gamma=0.001, kernel=poly; total time=   1.3s
-[CV] END ....................C=100, gamma=0.001, kernel=poly; total time=   1.3s
-[CV] END ....................C=100, gamma=0.001, kernel=poly; total time=   1.4s
-[CV] END ....................C=100, gamma=0.001, kernel=poly; total time=   1.4s
-[CV] END .................C=100, gamma=0.001, kernel=sigmoid; total time=   0.2s
-[CV] END .................C=100, gamma=0.001, kernel=sigmoid; total time=   0.3s
-[CV] END .................C=100, gamma=0.001, kernel=sigmoid; total time=   0.3s
-[CV] END .................C=100, gamma=0.001, kernel=sigmoid; total time=   0.3s
-[CV] END .................C=100, gamma=0.001, kernel=sigmoid; total time=   0.3s
+[CV] END ........................C=1, gamma=0.01, kernel=rbf; total time=   0.9s
+[CV] END ........................C=1, gamma=0.01, kernel=rbf; total time=   1.0s
+[CV] END ........................C=1, gamma=0.02, kernel=rbf; total time=   1.1s
+[CV] END ........................C=1, gamma=0.02, kernel=rbf; total time=   1.1s
+[CV] END ........................C=1, gamma=0.02, kernel=rbf; total time=   1.2s
+[CV] END ........................C=1, gamma=0.02, kernel=rbf; total time=   1.3s
+[CV] END ........................C=1, gamma=0.02, kernel=rbf; total time=   1.2s
+[CV] END ...........................C=2, gamma=1, kernel=rbf; total time=   3.5s
+[CV] END ...........................C=2, gamma=1, kernel=rbf; total time=   3.2s
+[CV] END ...........................C=2, gamma=1, kernel=rbf; total time=   3.3s
+[CV] END ...........................C=2, gamma=1, kernel=rbf; total time=   3.6s
+[CV] END ...........................C=2, gamma=1, kernel=rbf; total time=   4.5s
+[CV] END .........................C=2, gamma=0.1, kernel=rbf; total time=   3.7s
+[CV] END .........................C=2, gamma=0.1, kernel=rbf; total time=   5.0s
+[CV] END .........................C=2, gamma=0.1, kernel=rbf; total time=   4.6s
+[CV] END .........................C=2, gamma=0.1, kernel=rbf; total time=   4.1s
+[CV] END .........................C=2, gamma=0.1, kernel=rbf; total time=   4.9s
+[CV] END ........................C=2, gamma=0.01, kernel=rbf; total time=   0.9s
+[CV] END ........................C=2, gamma=0.01, kernel=rbf; total time=   1.0s
+[CV] END ........................C=2, gamma=0.01, kernel=rbf; total time=   0.9s
+[CV] END ........................C=2, gamma=0.01, kernel=rbf; total time=   1.1s
+[CV] END ........................C=2, gamma=0.01, kernel=rbf; total time=   0.9s
+[CV] END ........................C=2, gamma=0.02, kernel=rbf; total time=   1.8s
+[CV] END ........................C=2, gamma=0.02, kernel=rbf; total time=   1.3s
+[CV] END ........................C=2, gamma=0.02, kernel=rbf; total time=   2.0s
+[CV] END ........................C=2, gamma=0.02, kernel=rbf; total time=   1.5s
+[CV] END ........................C=2, gamma=0.02, kernel=rbf; total time=   1.4s
+[CV] END ...........................C=3, gamma=1, kernel=rbf; total time=   4.4s
+[CV] END ...........................C=3, gamma=1, kernel=rbf; total time=   3.9s
+[CV] END ...........................C=3, gamma=1, kernel=rbf; total time=   4.2s
+[CV] END ...........................C=3, gamma=1, kernel=rbf; total time=   3.9s
+[CV] END ...........................C=3, gamma=1, kernel=rbf; total time=   3.6s
+[CV] END .........................C=3, gamma=0.1, kernel=rbf; total time=   3.8s
+[CV] END .........................C=3, gamma=0.1, kernel=rbf; total time=   3.6s
+[CV] END .........................C=3, gamma=0.1, kernel=rbf; total time=   4.2s
+[CV] END .........................C=3, gamma=0.1, kernel=rbf; total time=   5.9s
+[CV] END .........................C=3, gamma=0.1, kernel=rbf; total time=   7.1s
+[CV] END ........................C=3, gamma=0.01, kernel=rbf; total time=   1.5s
+[CV] END ........................C=3, gamma=0.01, kernel=rbf; total time=   1.6s
+[CV] END ........................C=3, gamma=0.01, kernel=rbf; total time=   1.8s
+[CV] END ........................C=3, gamma=0.01, kernel=rbf; total time=   1.7s
+[CV] END ........................C=3, gamma=0.01, kernel=rbf; total time=   1.5s
+[CV] END ........................C=3, gamma=0.02, kernel=rbf; total time=   3.3s
+[CV] END ........................C=3, gamma=0.02, kernel=rbf; total time=   3.2s
+[CV] END ........................C=3, gamma=0.02, kernel=rbf; total time=   3.3s
+[CV] END ........................C=3, gamma=0.02, kernel=rbf; total time=   3.0s
+[CV] END ........................C=3, gamma=0.02, kernel=rbf; total time=   2.7s
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
-<style>#sk-container-id-18 {color: black;}#sk-container-id-18 pre{padding: 0;}#sk-container-id-18 div.sk-toggleable {background-color: white;}#sk-container-id-18 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-18 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-18 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-18 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-18 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-18 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-18 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-18 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-18 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-18 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-18 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-18 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-18 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-18 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-18 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-18 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-18 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-18 div.sk-item {position: relative;z-index: 1;}#sk-container-id-18 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-18 div.sk-item::before, #sk-container-id-18 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-18 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-18 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-18 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-18 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-18 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-18 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-18 div.sk-label-container {text-align: center;}#sk-container-id-18 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-18 div.sk-text-repr-fallback {display: none;}</style><div class="sk-top-container" id="sk-container-id-18"><div class="sk-text-repr-fallback"><pre>GridSearchCV(estimator=SVC(),
-             param_grid={'C': [0.1, 1, 10, 100], 'gamma': [1, 0.1, 0.01, 0.001],
-                         'kernel': ['rbf', 'poly', 'sigmoid']},
-             verbose=2)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</br></b></div><div class="sk-container" hidden=""><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-20" type="checkbox"/><label class="sk-toggleable__label sk-toggleable__label-arrow" for="sk-estimator-id-20">GridSearchCV</label><div class="sk-toggleable__content"><pre>GridSearchCV(estimator=SVC(),
-             param_grid={'C': [0.1, 1, 10, 100], 'gamma': [1, 0.1, 0.01, 0.001],
-                         'kernel': ['rbf', 'poly', 'sigmoid']},
-             verbose=2)</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-21" type="checkbox"/><label class="sk-toggleable__label sk-toggleable__label-arrow" for="sk-estimator-id-21">estimator: SVC</label><div class="sk-toggleable__content"><pre>SVC()</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-22" type="checkbox"/><label class="sk-toggleable__label sk-toggleable__label-arrow" for="sk-estimator-id-22">SVC</label><div class="sk-toggleable__content"><pre>SVC()</pre></div></div></div></div></div></div></div></div></div></div>
+<style>#sk-container-id-2 {color: black;}#sk-container-id-2 pre{padding: 0;}#sk-container-id-2 div.sk-toggleable {background-color: white;}#sk-container-id-2 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-2 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-2 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-2 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-2 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-2 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-2 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-2 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-2 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-2 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-2 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-2 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-2 div.sk-item {position: relative;z-index: 1;}#sk-container-id-2 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-2 div.sk-item::before, #sk-container-id-2 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-2 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-2 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-2 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-2 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-2 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-2 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-2 div.sk-label-container {text-align: center;}#sk-container-id-2 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-2 div.sk-text-repr-fallback {display: none;}</style><div class="sk-top-container" id="sk-container-id-2"><div class="sk-text-repr-fallback"><pre>GridSearchCV(estimator=SVC(),
+             param_grid={'C': [0.1, 1, 2, 3], 'gamma': [1, 0.1, 0.01, 0.02],
+                         'kernel': ['rbf']},
+             verbose=2)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</br></b></div><div class="sk-container" hidden=""><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox"/><label class="sk-toggleable__label sk-toggleable__label-arrow" for="sk-estimator-id-2">GridSearchCV</label><div class="sk-toggleable__content"><pre>GridSearchCV(estimator=SVC(),
+             param_grid={'C': [0.1, 1, 2, 3], 'gamma': [1, 0.1, 0.01, 0.02],
+                         'kernel': ['rbf']},
+             verbose=2)</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox"/><label class="sk-toggleable__label sk-toggleable__label-arrow" for="sk-estimator-id-3">estimator: SVC</label><div class="sk-toggleable__content"><pre>SVC()</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-4" type="checkbox"/><label class="sk-toggleable__label sk-toggleable__label-arrow" for="sk-estimator-id-4">SVC</label><div class="sk-toggleable__content"><pre>SVC()</pre></div></div></div></div></div></div></div></div></div></div>
 </div>
 </div>
 </div>
@@ -9537,7 +9414,7 @@ SVM Cross Validation Standard Deviation: 0.00968056161631825
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>The best parameters are: 
-{'C': 100, 'gamma': 0.001, 'kernel': 'sigmoid'}
+{'C': 2, 'gamma': 0.01, 'kernel': 'rbf'}
 </pre>
 </div>
 </div>
@@ -9581,7 +9458,7 @@ SVM Cross Validation Standard Deviation: 0.00968056161631825
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Accuracy Score of the SVM model with the best parameters: 
 
-0.9889624724061811
+1.0
 </pre>
 </div>
 </div>
@@ -9613,14 +9490,14 @@ SVM Cross Validation Standard Deviation: 0.00968056161631825
 
               precision    recall  f1-score   support
 
-           0       0.99      0.98      0.98       153
-           1       0.99      1.00      0.99       162
-           2       0.99      0.99      0.99       336
-           3       0.99      0.99      0.99       255
+           0       1.00      1.00      1.00       153
+           1       1.00      1.00      1.00       162
+           2       1.00      1.00      1.00       336
+           3       1.00      1.00      1.00       255
 
-    accuracy                           0.99       906
-   macro avg       0.99      0.99      0.99       906
-weighted avg       0.99      0.99      0.99       906
+    accuracy                           1.00       906
+   macro avg       1.00      1.00      1.00       906
+weighted avg       1.00      1.00      1.00       906
 
 </pre>
 </div>
@@ -9651,10 +9528,10 @@ weighted avg       0.99      0.99      0.99       906
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Confusion Matrix of the SVM model with the best parameters: 
 
-[[150   0   3   0]
+[[153   0   0   0]
  [  0 162   0   0]
- [  2   0 331   3]
- [  0   2   0 253]]
+ [  0   0 336   0]
+ [  0   0   0 255]]
 </pre>
 </div>
 </div>
@@ -9680,7 +9557,10 @@ weighted avg       0.99      0.99      0.99       906
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">joblib</span>
-<span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">best_estimator_</span><span class="p">,</span> <span class="s1">'final_model.pkl'</span><span class="p">)</span>
+<span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">best_estimator_</span><span class="p">,</span> <span class="s1">'final_model_improved.pkl'</span><span class="p">)</span>
+<span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">scaler</span><span class="p">,</span> <span class="s1">'scaler_improved.pkl'</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Model and scaler saved successfully!"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -9690,10 +9570,11 @@ weighted avg       0.99      0.99      0.99       906
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>['final_model.pkl']</pre>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Model and scaler saved successfully!
+</pre>
 </div>
 </div>
 </div>
