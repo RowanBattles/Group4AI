@@ -1,0 +1,33 @@
+﻿<Window x:Class="_5_dot_test.Start"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_5_dot_test"
+        mc:Ignorable="d"
+        Title="Start" Height="450" Width="800"
+        WindowState="Maximized"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <!-- Header -->
+        <Grid VerticalAlignment="Top" Height="100" Background="#FF2C6CA3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10" Grid.Column="0">
+                <Image Source="images/5dots.png" Height="50" Margin="10,0,0,0"/>
+                <TextBlock Text="5-point test" FontSize="24" FontWeight="Bold" VerticalAlignment="Center"/>
+            </StackPanel>
+            <Image Source="images/MaastrichtUni.png" Height="50" Margin="0,10,10,0" Grid.Column="2" HorizontalAlignment="Right"/>
+        </Grid>
+
+        <!-- Main Content -->
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock HorizontalAlignment="Center" Margin="10" FontWeight="Bold" FontSize="45" TextAlignment="Center" Text="Welcome to the 5 DOT test"/>
+            <Button Cursor="Hand" Content="START" Click="StartButton_Click" HorizontalAlignment="Center" Height="200" Width="295" FontSize="80" FontWeight="Bold" BorderThickness="0" Margin="20"/>
+        </StackPanel>
+    </Grid>
+</Window>
