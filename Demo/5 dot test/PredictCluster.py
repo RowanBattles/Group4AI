@@ -6,11 +6,11 @@ import os
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Load the model
-model_path = os.path.join(script_dir, 'svm_model.pkl')
+model_path = os.path.join(script_dir, 'final_model_improved.pkl')
 model = joblib.load(model_path)
 
 # Load the scaler
-scaler_path = os.path.join(script_dir, 'scaler.pkl')
+scaler_path = os.path.join(script_dir, 'scaler_improved.pkl')
 scaler = joblib.load(scaler_path)
 
 expected_features = [
